@@ -12,20 +12,36 @@ public class Blackjack {
   
         int cardNumber1 = drawRandomCard();
         int cardNumber2 = drawRandomCard();
-        int cardSum = cardNumber1 + cardNumber2;
-
         String card1 = cardString(cardNumber1);
         String card2 = cardString(cardNumber2);
+
+        if (cardNumber1 > 10) {
+            cardNumber1 = 10;
+        }
+
+        if (cardNumber2 > 10) {
+            cardNumber2 = 10;
+        }
+
+        int cardSum = cardNumber1 + cardNumber2;
 
         System.out.println("\n You got a \n" + card1 + "\n and a \n" + card2);
         System.out.println("Your total is " + cardSum);
 
         int dealNumber1 = drawRandomCard();
         int dealNumber2 = drawRandomCard();
-        int dealSum = dealNumber1 + dealNumber2;
-
         String deal1 = cardString(dealNumber1);
         String deal2 = cardString(dealNumber2);
+
+        if (dealNumber1 > 10) {
+            dealNumber1 = 10;
+        }
+
+        if (dealNumber2 > 10) {
+            dealNumber2 = 10;
+        }
+
+        int dealSum = dealNumber1 + dealNumber2;
 
         System.out.println("The dealer shows \n" + deal1 + "\nand has a card facing down \n" + faceDown());
         System.out.println("\nThe dealer's total is hidden.");
@@ -35,6 +51,7 @@ public class Blackjack {
             if (choice.equals("hit")) {
                 int cardNumber3 = drawRandomCard();
                 String card3 = cardString(cardNumber3);
+                if (cardNumber3 > 10) cardNumber3 = 10;
                 cardSum += cardNumber3;
                 System.out.println("\nYou get a \n" + card3);
                 System.out.println("Your new total is " + cardSum);
@@ -52,6 +69,7 @@ public class Blackjack {
                 while (dealSum < 17) {
                     int dealNumber3 = drawRandomCard();
                     String deal3 = cardString(dealNumber3);
+                    if (dealNumber3 > 10) dealNumber3 = 10;
                     dealSum += dealNumber3;
                     System.out.println("\nDealer gets a\n" + deal3);
                     System.out.println("\nDealer's new total is " + dealSum);
