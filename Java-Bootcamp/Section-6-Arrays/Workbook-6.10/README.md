@@ -1,19 +1,15 @@
-# Workbook 6.2
-
-## Exams (Revisited)
-Another wave of students needs to write their exams.
+# Workbook 6.10
 
 ## Task 1
-Create a new array of five students.
+Create a <code>for</code> loop that runs through the length of the <code>toppings</code> array. Inside the <code>for</code>:
+1. Print each index number followed by a dot.
+2. Beside the number, pick up the user's topping.
+
+![dpmjhcp3e0gqa0keljlm6--1885x1079](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/329d79da-7ca2-4a92-825e-9816ade29204)
+
+Store every topping the user inputs in the <code>toppings</code> array.
 
 ## Task 2
-Create a <code>for</code> loop that runs through the array, and prints a message for each element.
+Create a <code>for</code> loop that runs through the length of the array and prints each topping.
 
-## Result
-<code>>>It's time to take your 5th year exams. Please, take your seats.</code><br>
-<code>>></code><br>
-<code>Malfoy, you will take seat 0</code><br>
-<code>Crabbe, you will take seat 1</code><br>
-<code>Goyle, you will take seat 2</code><br>
-<code>Pansy, you will take seat 3</code><br>
-<code>Dean, you will take seat 4</code>
+![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/d4485994-3703-4173-a980-4411fddbf201)
