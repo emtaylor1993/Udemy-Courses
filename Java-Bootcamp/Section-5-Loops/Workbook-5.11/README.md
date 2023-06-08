@@ -12,7 +12,7 @@ Print the rules of the game to the user.
 <code>scan.nextLine()</code>
 
 ## Task 2:
-Make a <code> while loop that runs forever. Place your second <code>scan.nextLine()</code> from Task 1 as the first line of your loop. Print hey in your loop's second line.
+Make a <code>while</code> loop that runs forever. Place your second <code>scan.nextLine()</code> from Task 1 as the first line of your loop. Print hey in your loop's second line.
   
 ![htxwscy7l81iygka3tq5x--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/5ed36cfa-764f-43ce-a76f-e9401bf531f1)
   
