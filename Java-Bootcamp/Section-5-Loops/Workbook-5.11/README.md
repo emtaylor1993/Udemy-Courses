@@ -1,7 +1,7 @@
 # Workbook 5.11
 
 ## Task 1: 
-Print the rules of the game to the user.
+Print the rules of the game to the user.<br>
 <code>>>Let's play Rolling Java. Type anything to start.</code><br>
 <code>scan.nextLine()</code><br>
 <code>>> Great, here are the rules:\n</code><br>
