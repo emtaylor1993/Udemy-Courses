@@ -1,19 +1,32 @@
 # Workbook 6.2
 
-## Exams (Revisited)
+From the `Java Bootcamp Resources`, launch **`Workbook 6.2`**.
+
+![Untitled3.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F81a93ee6-3996-48ae-8172-a08549b94da4?alt=media&token=5756ba0a-6ec6-4e6f-a37a-8fddb3bf559f)
+
+Exams (Revisited)
+----------------
+
 Another wave of students needs to write their exams.
 
 ## Task 1
+
 Create a new array of five students.
 
+```java
+"Malfoy", "Crabbe", "Goyle", "Pansy", "Dean"
+```
 ## Task 2
-Create a <code>for</code> loop that runs through the array, and prints a message for each element.
+
+Create a `for` loop that runs through the array, and prints a message for each element.
 
 ## Result
-<code>>>It's time to take your 5th year exams. Please, take your seats.</code><br>
-<code>>></code><br>
-<code>Malfoy, you will take seat 0</code><br>
-<code>Crabbe, you will take seat 1</code><br>
-<code>Goyle, you will take seat 2</code><br>
-<code>Pansy, you will take seat 3</code><br>
-<code>Dean, you will take seat 4</code>
+```
+>>: It's time to take your 5th year exams. Please, take your seats.
+>>:
+>>: Malfoy, you will take seat 0
+>>: Crabbe, you will take seat 1
+>>: Goyle, you will take seat 2
+>>: Pansy, you will take seat 3
+>>: Dean, you will take seat 4
+```
