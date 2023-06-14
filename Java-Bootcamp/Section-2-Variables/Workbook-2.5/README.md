@@ -1,28 +1,47 @@
 # Workbook 2.5
 
-## JavaGram
-In this workbook, you will create a <code>sign-up</code> page for JavaGram!
+From the `Java-Bootcamp-Resources`, open the **`Workbook 2.5`** folder.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/485ee26a-aca9-436c-acde-d72e1283f90a)
+![Screen Shot 2022-10-11 at 1.53.18 AM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fb52e3cf0-6e8e-412a-a9e4-39a66840b6cc?alt=media&token=988927d9-69b6-4e66-b823-37fc1554b3f4)
 
-## Task 1
+JavaGram
+---------
+
+In this workbook, you will create a `sign-up` page for JavaGram!
+
+![Screen Shot 2022-10-11 at 2.03.09 AM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F6da79766-cf67-4fdc-9cbd-c51ccbdd929a?alt=media&token=26b50a44-7657-4589-9469-16c94beb7475)
+
+## Careful from the Incoming **Trap**!
+
+You will encounter the `nextLine()` trap when picking up the username. 
+
+|`nextLine()` Trap | |
+| --- | --- |
+| Pitfall  | `nextLine()` gets skipped when placed after `nextInt()` , `nextDouble()`, or `nextLong()`. 
+| Solution  |Add an extra `nextLine()` before the "real" `nextLine()`.
+
+## **Task 1**
 Use Scanner to pick up each response.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/868ab603-6957-42ea-97b1-3185a487bb86)
+![Screen Shot 2022-10-31 at 2.14.29 AM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F3635496f-1319-4396-9945-67a902ddf02f?alt=media&token=e9c5cbc1-e0bd-4242-bd01-d68e04de705f)
 
-## Tasl 2
+## **Task 2**
+
 Print the data that you picked up.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/4eed8f0f-09a1-4520-be3c-eb950f27c5c0)
+![Screen Shot 2022-10-31 at 2.19.53 AM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F1551b9c1-2d93-40bd-a2c9-0bf5745cff01?alt=media&token=fa33a2d9-1593-4f0f-9cf8-5f9c50e2dd8c)
 
-Notice how it prints in a nice format. <code>\n</code> inserts a new line.
+Notice how it prints in a nice format. **`\n`** inserts a new line.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/4a875d83-6183-4586-acb1-d0859cc4b852)
+![t.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F3f86967b-2491-4f9a-ba7b-738f12781adc?alt=media&token=2d597ada-6edb-4605-a467-56d065199ead)
 
-<code>\t</code> inserts a tab of space.
+**`\t`** inserts a tab of space.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/a569bdcc-c26e-4a56-86cb-1f003baf9103)
+![n.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F55e09b06-0a98-4827-8041-ee31121030f1?alt=media&token=c83ea4e3-3450-4e6d-860f-a7e580b7e464)
+
 
 ## Result
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/14dd9627-af83-45d0-a373-4f3fb6d5f029)
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F40d52b6f-3edc-4e4f-a850-c01cc03ae857?alt=media&token=69930f78-d549-4eec-9f0d-0146296cf6ce)
+
+## Good Luck!
