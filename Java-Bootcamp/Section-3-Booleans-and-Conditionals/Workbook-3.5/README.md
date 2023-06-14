@@ -1,11 +1,63 @@
 # Workbook 3.5
 
+From the `Java Bootcamp Resources`, launch the **`Workbook 3.5`** folder.
+
+![Screen Shot 2022-10-16 at 6.44.39 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fdd27cafe-ec54-44bd-93b6-111b96de713e?alt=media&token=ae82e428-1c88-4cc5-b7b1-0251b65bbfd6)
+
+
+
 ## Your Work Schedule
-Assume that the <code>day</code> variable can be any value between 1 (Monday) and 7 (Sunday). There's also a <code>boolean</code> variable: <code>holiday</code>.
 
-## Task 1: Working That Day?
-In the event of a holiday, print: <code>Woohoo, no work</code><br><br>
-During the weekend (Saturday or Sunday), print: <code>It's the weekend, no work!</code><br><br>
-Otherwise, print: <code>Wake up at 7:00 :(</code>
+Assume that `day` can be any value between 1 (Monday) and 7 (Sunday). There's also a `boolean` variable: `holiday`.
 
-## Run Your Code
+```java
+public class WorkSchedule {
+
+     public static void main﻿(﻿String[] args﻿) {
+           int day = 3;
+           boolean holiday = true;                ﻿ ﻿
+     }
+}
+
+```
+
+## Task 1 - Do I have work that day?
+
+In the event of a holiday, `print`:
+
+> Woohoo, no work
+
+During the weekend (Saturday or Sunday), `print`:
+
+> It's the weekend, no work!
+
+Otherwise, `print`:
+
+> Wake up at 7:00 :(
+
+## Run your code.
+
+### Test Case 1:
+```java
+    int day = 3;
+    boolean holiday = true;                ﻿ ﻿
+```
+
+`>>woohoo, no work!`
+
+### Test Case 2:
+
+```java
+    int day = 3;
+    boolean holiday = false;                ﻿ ﻿
+```
+
+`>>Wake up at 7:00 :(`
+
+### Test Case 3:
+
+```java
+    int day = 6;
+    boolean holiday = false;                ﻿ ﻿
+```
+`>>It's the weekend, no work!`
