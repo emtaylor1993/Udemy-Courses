@@ -1,10 +1,72 @@
 # Workbook 4.2
 
-## Tip the Waiter
+From the `Java Bootcamp Resources`, launch the **`Workbook 4.2`** folder.
+
+![4.2.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F5697a3d6-c991-42e6-9950-9484a32a1afb?alt=media&token=663297d4-4794-479f-9461-330aac1b7127)
+
+## Tip the waiter.
 Your bill was $53.50. It's polite to tip the waiter 15% of your bill.
 
-## Task 1:
-Write a function that will tip the waiter 15% of the bill.
+## Task 1 - Write a function
 
-## Task 2:
-Call your function.
+You will write a function that does this task.
+
+- Function name: `tipTheWaiter`. It calculates a tip and prints it.
+
+```java
+/**
+ *  Function name: tipTheWaiter - calculates a tip and prints it. <-----
+ *  @param bill (double).
+ *
+ * Inside the function:
+ *  1. Calculates a tip that's 15 percent of the bill you paid.
+ *  2. Prints: your service was wonderful! Please, accept this tip: $<tip>
+ *
+ */
+```
+
+- Parameters: The function takes one parameter named `bill` of type `double`.
+
+```java
+/**
+ *  Function name: tipTheWaiter - calculates a tip and prints it.
+ *  @param bill (double). <-----
+ *
+ *  Inside the function:
+ *   1. Calculates a tip that's 15 percent of the bill you paid.
+ *   2. Prints: your service was wonderful! Please, accept this tip: $<tip>
+ *
+ */
+```
+
+- Return value: the comment says nothing about a return value. So, you can assume the function is `void`.
+
+- Inside the function, implement the following logic:
+
+```java
+/**
+ *  Function name: tipTheWaiter - calculates a tip and prints it.
+ *  @param bill (double).
+ *
+ *  Inside the function:   <-----
+ *   1. Calculates a tip that's 15 percent of the bill you paid.
+ *   2. Prints: your service was wonderful! Please, accept this tip: $<tip>
+ *
+ */
+```
+
+Task 2 - Call the function
+--------------------------
+
+Call the function from `main()`.
+
+Run your code.
+--------------
+```
+Waiter: I hope you enjoyed your meal!
+```
+
+```
+Thank you!
+Your service was wonderful! Please, accept this tip: $8.025
+```
