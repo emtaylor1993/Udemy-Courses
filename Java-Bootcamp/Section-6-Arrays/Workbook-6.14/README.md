@@ -1,23 +1,84 @@
 # Workbook 6.14
 
+From the `Java Bootcamp Resources`, launch **`Workbook 6.14`**.
+
+![Untitled4.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F0be59cd8-2530-47bf-a94d-e64d6b524dbd?alt=media&token=04fa90fd-74ee-4efa-9081-6c6b4f9d3546)
+
 ## Task 1
-Create a function that returns a random number between 0 and 99.
+
+This function returns a random number between 0 and 99. Copy it into your class.
+
+```java
+    public static int randomNumber() {
+        double randomNumber = Math.random()*100;
+        return (int)randomNumber;
+    }
+```
 
 ## Task 2
-Write a function that prints the contents of an <code>int[][]</code> array. Call the function for the array.
 
-## Result
+Write a function that prints the contents of an `int[][]` array.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/75f2f133-4607-4dd3-92c4-2e39f6d151e4)
+```java
+/**
+ * Function name: print2DArray
+ * @param array ( int[][] )
+ *
+ * 
+ * 
+ *       
+ *      
+ *      
+ */
+```
+The function uses a nested loop. The inner loop prints each row in one line.
+
+```java
+/**
+ * Function name: print2DArray
+ * @param array ( int[][] )
+ *
+ * Inside the function:
+ *  1. Nested loop:
+ *      - Inner Loop: System.out.print(array[i][j] + " ");
+ *      
+ */
+```
+
+After the inner loop runs to completion, print a new line. 
+```java
+/**
+ * Function name: print2DArray
+ * @param array ( int[][] )
+ *
+ * Inside the function:
+ *  1. Nested loop:
+ *      - Inner Loop: System.out.print(array[i][j] + " ");
+ *      - After the Inner Loop Completes: System.out.print("\n");
+ */
+```
+
+Call `print2DArray` for the following array.
+```java
+int[][] array = {
+    {48, 56, 56, 76, 0, 81, 51, 81, 99, 70},
+    {38, 52, 73, 6, 10, 56, 1, 71, 47, 9},
+    {85, 35, 47, 98, 91, 25, 69, 52, 2, 93}
+};
+```
+### Result
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fbd0137b7-9cfb-4754-99aa-f29d693674c0?alt=media&token=684e824a-1ddd-488e-8ed9-a2055166cd2b)
 
 Delete the array if you achieve the result.
 
 ## Task 3
-Create a 2D array with 100 rows and 10 columns. Then call <code>print2DArray</code><br>
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/9689a0d0-bffa-4c6c-a3f8-f45cddf6cbe9)
+Create a 2D array with **100 rows** and **10 columns**. Then call `print2DArray`.
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F20005e86-d942-4c64-83f3-16dca224a1ac?alt=media&token=07731bcd-1d78-44ea-aac9-482be5031085)
 
 ## Task 4
-Use a nested loop to populate the array with random numbers before calling <code>print2DArray</code><br>
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/bdabbb35-a211-40eb-bf33-e2e57a36fbba)
+Use a nested loop to populate the array with random numbers before calling: `print2DArray`.
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fc8de9e35-1104-4e7c-86bb-d602fa547168?alt=media&token=e7d53e94-da88-4fca-8d4b-8818cab10849)
