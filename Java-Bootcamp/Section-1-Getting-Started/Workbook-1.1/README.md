@@ -65,15 +65,4 @@ Inside `main()`, print these messages to the console.
 
 ![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F7cbce2a6-10fe-4bb6-a1c4-87e20cf94ac1?alt=media&token=2ae783e6-fc9d-464f-a049-8145e8f2b825)
 
-
-## Solution
-
-The **code solution** is beside your starter project.
-
-![Screen Shot 2022-10-10 at 11.51.25 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F06426076-03af-4aae-93c5-b35ee867cc0c?alt=media&token=7ea85942-4e79-4d62-a697-db103f959737)
-
-The **video solution** is inside the course’s appendix (last section on Udemy).
-
-![Screen Shot 2022-10-07 at 7.42.56 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F706d1799-81de-4218-9c52-34fb491ca6ca?alt=media&token=e646d1c6-bba1-46de-ae64-626afc378d7c)
-
 ## Good Luck!
