@@ -1,43 +1,95 @@
 # Workbook 5.11
 
-## Task 1: 
-Print the rules of the game to the user.<br>
-<code>>>Let's play Rolling Java. Type anything to start.</code><br>
-<code>scan.nextLine()</code><br>
-<code>>> Great, here are the rules:\n</code><br>
-<code>>> - If you roll a 6, the game stops.</code><br>
-<code>>> - If you roll a 4, nothing happens.</code><br>
-<code>>> - Otherwise, you get 1 point.\n</code><br>
-<code>>> You must collect at least 3 points to win. Enter anything to roll:</code><br>
-<code>scan.nextLine()</code>
+From the `Java Bootcamp Resources`, launch **`Workbook 5.11`**.
 
-## Task 2:
-Make a <code>while</code> loop that runs forever. Place your second <code>scan.nextLine()</code> from Task 1 as the first line of your loop. Print hey in your loop's second line.
-  
-![htxwscy7l81iygka3tq5x--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/5ed36cfa-764f-43ce-a76f-e9401bf531f1)
-  
-After testing your code, remove the hey print.
-  
-## Task 3:
-Define the <code>rollDice()</code> function.
-  
-## Task 4:
-During each run, call <code>rollDice()</code> and store the value in <code>diceRoll</code>. Print each dice roll: </code>You rolled a <diceRoll></code>
-  
-![1tgkbolnopanitwzcl318--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/c7e636c6-b27a-4e8c-8db1-58ebba17b40f)
+![11.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F7fdaa8e4-9c26-47be-88aa-e7de6c039712?alt=media&token=602c928a-94a4-48fd-81a1-b8ff83c504d3)
 
-## Task 5: 
-Write code the follows the rules of the game.
+Task 1
+------
 
-![chzc140k6408vbicncj89--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/dfa804fb-e45a-4f34-8d75-7697429cf520)
+Print the rules to the user:
 
-## Task 6:
-Display a winning and losing message for the user.
+`>> Let's play Rolling Java. Type anything to start.`
 
-**Winning Scenario**
+**`scan.nextLine`**
 
-![y5871fh4y2t6kz1h448rh--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/24061bb6-f6e1-4f7e-8f7f-50a5e5dcc8af)
+`>> Great, here are the rules:\n`
 
-**Losing Scenario**
+`>> - If you roll a 6, the game stops.`
 
-![dja7ckd26fl4y4nyv7i10--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/208bae25-08e1-4b50-b41d-27f0b6132ea8)
+`>> - If you roll a 4, nothing happens.`
+
+`>> - Otherwise, you get 1 point.\n`
+
+`>> You must collect at least 3 points to win. Enter anything to roll:`
+
+**`scan.nextLine`**
+
+
+Task 2
+------
+
+Make a `while` loop that runs forever.
+
+Place your second `scan.nextLine()` from **Task 1** as the first line in your loop. Print `hey` in your loop's second line.
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F293c1686-3f2f-48c3-b35b-c38ecccf004d?alt=media&token=8130ee77-4478-435a-8bb6-5425760e1a74)
+
+After testing your code, remove the `hey` print.
+
+Task 3
+------
+
+Define the `rollDice` function.
+
+```java
+/**
+ * Function name: rollDice
+ * @return randomNumber (int)
+ *
+ * Inside the function:
+ *  - return a random number between one and six. 
+ */
+```
+
+Task 4
+------
+
+During each run, call `rollDice()` and store the value in `diceRoll`. Print each dice roll: `You rolled a <diceRoll>.`.
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fda2d821f-3e00-41f8-b6f2-7ef4f804a88a?alt=media&token=8ef6c1fd-d325-4cfb-93ee-9953aa2d8e84)
+
+Task 5
+------
+
+Whenever the user rolls a **6**:
+   -   print: `End of game.`
+   -   stop the game.
+
+Whenever the user rolls a 4:
+  -   print: `Zero points. Keep rolling.`
+
+When the user rolls anything else:
+  -   update the `score` variable by 1
+
+  -   print: `One point. Keep rolling`.
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F2dac03b7-ff67-4738-82d0-296d4f4905aa?alt=media&token=db4cda64-8f17-439e-b481-67c67ffb716b)
+
+Task 6
+------
+
+After the game ends, check the user's points. If the score is greater than or equal to 3, print:
+
+  - `Wow, that's lucky. You win!`
+
+Otherwise, print:
+
+  - `Tough luck, you lose :(`
+
+**Winning scenario:**
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fe9d90fd7-fda0-4db2-bd6b-73dbd47dc93d?alt=media&token=3a06d786-812d-4508-a393-4f81391ce7aa)
+
+**Losing scenario:**
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fb70e60ca-3bb9-401f-b967-8d3667a4bfc5?alt=media&token=d8250c00-4eac-4514-96e8-4853a1cf101f)
