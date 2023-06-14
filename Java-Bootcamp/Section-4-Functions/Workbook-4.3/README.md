@@ -1,15 +1,127 @@
 # Workbook 4.3
 
+From the `Java Bootcamp Resources`, launch the **`Workbook 4.3`** folder.
+
+![4.3.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F45585afb-2d3c-4372-a1ba-174db6fcfc01?alt=media&token=c91a5eda-829d-4bbf-950a-92bcf75db7f4)
+
 ## Weather
-There are temperatures for noon, evening, and midnight in Fahrenheit. We need to convert them to Celsius.
+These are the temperatures for noon, evening, and midnight in Fahrenheit. We need to convert them to Celsius.
 
-## Task 1:
-Write a function that converts Fahrenheit to Celsius.
+```java
+public static void main﻿(﻿String[] args﻿) {
 
-## Task 2:
-Write a function to print out the temperature in both Fahrenheit and Celsius.
+   double noon = 77﻿;          //temperature in fahrenheit.
+   double evening = 61﻿;       //temperature in fahrenheit
+   double midnight = 55﻿;      //temperature in fahrenheit
 
-## Task 3:
-Run your code.
+}
+```
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/f3e5dfb7-f4e5-4b4b-9985-789745e2600c)
+## Task 1 - Write a function
+
+You will write a function that converts Fahrenheit to Celcius.
+
+- Function name.
+
+```java
+/**
+ * Function name: fahrenheitToCelsius. <-----
+ * @param fahrenheit (double)
+ * @return celsius (double)
+ *
+ * Inside the function:
+ *  1. return the celsius temperature.    C = (F - 32) * 5/9
+ */
+```
+
+- Parameter.
+
+```java
+/**
+ * Function name: fahrenheitToCelsius.
+ * @param   fahrenheit (double)  <------
+ * @return  celsius   (double)
+ *
+ * Inside the function:
+ *  1. return the celsius temperature.   C = (F - 32) * 5/9
+ */
+```
+
+- Return value.
+
+```java
+/**
+ * Function name: fahrenheitToCelsius.
+ * @param   fahrenheit (double)
+ * @return  celsius   (double) <------
+ *
+ * Inside the function:
+ *  1. return the celsius temperature.   C = (F - 32) * 5/9
+ */
+```
+
+Inside the function, use the equation to go from Fahrenheit to Celsius. Then, return the result.
+
+```java
+/**
+ * Function name: fahrenheitToCelsius.
+ * @param   fahrenheit (double)
+ * @return  celsius   (double)
+ *
+ * Inside the function:
+ *  1. return the celsius temperature.   C = (F - 32) * 5/9  <----
+ */
+```
+
+## Task 2 - Write another function
+
+-  Function name.
+
+```java
+/**
+ * Name: printTemperatures  <-----
+ * @param fahrenheit (double) 
+ *
+ * Inside the function:
+ *  1. prints the fahrenheit value: "F: <temp in fahrenheit>".
+ *  2. calls fahrenheitToCelsius, and
+ *     prints the celcius value: "C: <temp in celsius> \n".
+ */
+```
+
+- Parameter.
+
+```java
+/**
+ * Name: printTemperatures
+ * @param fahrenheit (double) <-----
+ *
+ * Inside the function:
+ *  1. prints the fahrenheit value: "F: <temp in fahrenheit>".
+ *  2. calls fahrenheitToCelsius, and
+ *     prints the celcius value: "C: <temp in celsius> \n"..
+ */
+```
+
+- Return value: The function is `void`.
+
+- Code the logic inside the function
+
+```java
+/**
+ * Name: printTemperatures
+ * @param fahrenheit (double)
+ *
+ * Inside the function:  <-----
+ *  1. prints the fahrenheit value: "F: <temp in fahrenheit>".
+ *  2. calls fahrenheitToCelsius, and prints the celcius value: "C: <temp in celsius> \n"..
+ */
+```
+
+## Task 3 - Call the function
+
+From `main()`, call the `printTemperatures` function for each value.
+
+## Run your code
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F668e8d4e-bcac-40ee-a9ae-7eb3ccb11992?alt=media&token=962bad7b-7a68-4710-95d4-a2391181c922)
