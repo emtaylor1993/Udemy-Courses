@@ -11,7 +11,6 @@ If you did not download the resources yet, return to the lesson: **Workbooks and
 
 
 ## Launch Workbook 1.1
------------------
 
 
 From the `Java-Bootcamp-Resources`, launch the **`Workbook 1.1`** folder.
@@ -34,17 +33,14 @@ Inside `FirstProgram.java`, you will notice **comments**.
 A comment follows two forward slashes `//`. It has no impact on your code. 
 
 ## Task 1
-----------------------
 
 Make a class.
 
 ## Task 2
----------------------------------
 
 Write the `main()` method.
 
 ## Task 3
-----------------------
 
 Inside `main()`, print these messages to the console.
 
@@ -54,9 +50,7 @@ Inside `main()`, print these messages to the console.
 >> I spilled Java all over my paper.
 >> My dog ate my Java.
 ```
-
 ## Execute your code
----
 `>>: javac FirstProgram.java`
 
 `>>: java FirstProgram`
@@ -65,7 +59,6 @@ Inside `main()`, print these messages to the console.
 ![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fd9bd8bca-219d-42a5-a7cb-d0e4ff9318e3?alt=media&token=75362a2c-8a44-4367-94c4-17a44491b707)
 
 ## Reminder
-------------
 
 - You can use the up key (`↑`) to run previous terminal commands.
 - You can use the `tab` key to autocomplete:
@@ -84,5 +77,3 @@ The **video solution** is inside the course’s appendix (last section on Udemy)
 ![Screen Shot 2022-10-07 at 7.42.56 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F706d1799-81de-4218-9c52-34fb491ca6ca?alt=media&token=e646d1c6-bba1-46de-ae64-626afc378d7c)
 
 ## Good Luck!
--------
-##### Subscribe to our [YouTube Channel](https://www.youtube.com/@RayanSlim087?sub_confirmation=1) and Discover More Valuable Content!
