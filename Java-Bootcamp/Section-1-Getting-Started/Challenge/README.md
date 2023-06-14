@@ -49,13 +49,3 @@ Try to achieve a similar output:
 >>:  S   S  A   A
 >>:   SSS   A   A
 ```
-
-## Solution
-
-The **solution code** is beside your starter project.
-
-![Screen Shot 2022-10-10 at 11.49.40 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F751918ba-4b63-4969-a02c-7338f981a422?alt=media&token=3f1b418f-98b5-4c8f-a41f-9305a0adeae7)
-
-The **video solution** is on Udemy.
-
-![Screen Shot 2022-10-09 at 5.00.51 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F378e76e6-6330-4420-99e4-8f915ec8f4d0?alt=media&token=f81a5bfa-0604-4530-b6a3-c8c4bab07d9f)
