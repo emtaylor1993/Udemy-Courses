@@ -1,16 +1,47 @@
 # Workbook 7.3
 
+From the `Java Bootcamp Resources`, launch **`Workbook 7.3`**.
+
+![3.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F04137a44-15c0-42c5-888d-e4643be3b19b?alt=media&token=f5673255-13e3-4eb7-b7ad-5121aa7b3ba5)
+
 ## Task 1
-Make each field <code>private</code>.
 
-## Task 2
-Add getters for <code>name</code>, <code>nationality</code>, <code>dateOfBirth</code>, and <code>seatNumber</code>
+Make each field `private`.
 
-## Task 3
-Call the getters from your <code>println</code> function and re-run the code.
+```java
+    private String name;
+    private String nationality;
+    private String dateOfBirth;
+    private String[] passport;
+    private int seatNumber;
+```
 
-## Task 4
-Add setters for <code>name</code>, <code>nationality</code>, <code>dateOfBirth</code>, and <code>seatNumber</code>
+## **Task 2**
 
-## Task 5
+Add getters for `name`, `nationality`, `dateOfBirth`, and `seatNumber`.
+
+## **Task 3**
+
+Call the getters from your `println` function and re-run the code.
+
+```
+>>﻿: Name: Rayan Slim
+>>﻿: Nationality: Canadi﻿an
+>>: Date of Birth: 01/0﻿1/1111
+>>﻿: Seat Number: 5
+```
+
+## **Task 4**
+
+Add setters for `name`, `nationality`, `dateOfBirth`, and `seatNumber`.
+
+## **Task 5**
+
 The person's current seat number is already taken. Update their seat number to 10 before printing the fields.
+
+```
+>>﻿: Name: Rayan Slim
+>>﻿: Nationality: Canadian
+>>﻿: Date of Birth: 01﻿/﻿01﻿/﻿1111
+>>﻿: Seat Number: 10
+```
