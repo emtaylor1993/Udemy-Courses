@@ -1,21 +1,35 @@
 # Workbook 5.8
 
-## Guess the number.
+From the `Java Bootcamp Resources`, launch **`Workbook 5.8`**.
+
+![8.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F8adf7661-d912-4885-acd6-d791e2a97b17?alt=media&token=77abd85a-353f-49ae-b5ef-c79eb5be2c5f)
+
+Guess the number
+----------------
+
 In this workbook, the user has to keep guessing a number until they get it right.
 
-## Task 1: Secret Number
+Task 1
+------
+
 Store a "secret" number between 1 and 5. Then, prompt the user to enter a guess.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/c1e1fc52-0c61-4d51-97e8-7d9c09186696)
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F29b841b2-1c45-4fd1-be4f-111d53a3ca09?alt=media&token=447ded67-8bc2-430f-ade4-f8efb69587e4)
 
-## Task 2: Loop
+Task 2
+------
+
 Set up a loop that keeps the user guessing until they get it right.
 
-![image](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/1d44e090-9f39-41b1-ab5b-5f9fbc7b6803)
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2F3c7ec148-495d-469a-8868-2748b4626422?alt=media&token=adcbfea2-9e6e-41d5-9317-fa5b1cb07521)
 
-In other words, the loop should keep running while the guess is different from the secret.
+In other words, the loop should keep running **while** the guess is different from the secret.
 
-## Task 3: Break Condition
-After they guess the number, print: </code>You got it!</code>
+Task 3
+------
 
-![pm3dk34p4rb0qki557fb6--1920x1080](https://github.com/emtaylor1993/Udemy-Courses/assets/93065901/12b5a2d5-a8e1-44f6-ba13-3a5f339e3e0e)
+After they guess the number, print:
+
+> You got it!
+
+![](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fe6d28075-0d3a-40a9-8b02-cb0e7dcbf90d?alt=media&token=845e84eb-7c68-4fbc-9ab1-f91869bf52e3)
