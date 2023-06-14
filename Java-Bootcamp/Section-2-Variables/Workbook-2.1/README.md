@@ -44,14 +44,4 @@ Print your final result. It should be be 137.
 
 ![Screen Shot 2022-10-09 at 5.00.51 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fe57a9834-af4e-41a4-a37e-6cd4f82978e4?alt=media&token=74fc2abb-174c-45d1-b27e-cc38e4a48348)
 
-## Solution
-
-The **code solution** is beside your starter project.
-
-![Screen Shot 2022-10-10 at 11.48.41 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Fa7a84b8f-eb50-47c5-91db-4329a221218c?alt=media&token=6d873f39-8746-47d1-8f6b-662df3ae9f1d)
-
-The **video solution** is inside the course appendix (last section on Udemy).
-
-![Screen Shot 2022-10-10 at 6.33.22 PM.png](https://firebasestorage.googleapis.com/v0/b/learnthepart-75aed.appspot.com/o/images%2Febed8f07-ba57-4a5b-9a71-e4e58c5d9b81?alt=media&token=019488a9-6df9-4a01-a3e9-39a2916f81f5)
-
 ## Good Luck!
