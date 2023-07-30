@@ -1,6 +1,7 @@
 import datetime as dt
 import smtplib
 from random import choice
+import
 
 now = dt.datetime.now()
 day = now.strftime("%A")
