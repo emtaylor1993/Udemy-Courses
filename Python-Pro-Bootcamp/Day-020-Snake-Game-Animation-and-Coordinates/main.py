@@ -1,3 +1,12 @@
+"""
+This script contains the code that runs the Snake Game.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle, snake, time
+"""
+
 from turtle import Screen
 from snake import Snake
 import time

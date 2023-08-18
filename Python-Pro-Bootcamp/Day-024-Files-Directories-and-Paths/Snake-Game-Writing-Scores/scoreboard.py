@@ -1,3 +1,14 @@
+"""
+This script contains code for the Scoreboard class. The Scoreboard
+class can update the score, add to the score, display a game
+over screen and save previous high scores.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle
+"""
+
 from turtle import Turtle
 
 ALIGNMENT = "center"

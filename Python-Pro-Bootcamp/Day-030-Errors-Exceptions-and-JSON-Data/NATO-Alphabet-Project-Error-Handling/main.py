@@ -1,3 +1,14 @@
+"""
+This script contains code for the NATO Alphabet Project. The code
+displays the phonetic alphabet spelling for a word the user enters
+complete with error handling.
+
+Author:        E. Taylor
+Date Created:  July 29, 2023
+Date Modified: August 18, 2023
+Dependencies:  pandas
+"""
+
 import pandas as pd
 
 is_valid_entry = False

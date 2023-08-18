@@ -1,3 +1,14 @@
+"""
+This script simulates a game in which the user guesses which option
+has the highest number of followers. The game ends when the user 
+guesses incorrectly.
+
+Author:        E. Taylor
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  art, game_data, replit, random
+"""
+
 from art import logo, vs
 from game_data import data
 from replit import clear

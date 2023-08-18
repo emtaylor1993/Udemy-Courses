@@ -1,3 +1,13 @@
+"""
+This script continue to calculate the value based on the operations
+given by the user until the user quits. 
+
+Author:        E. Taylor
+Date Created:  July 19, 2023
+Date Modified: August 17, 2023
+Dependencies:  art
+"""
+
 from art import logo
 
 def add(n1, n2):
@@ -19,6 +29,9 @@ operations = {
   "/": divide
 }
 
+"""
+Continues performing mathematical operations until the user quits.
+"""
 def calculator():
   print(logo)
   should_continue = "y"

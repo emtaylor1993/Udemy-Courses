@@ -1,3 +1,13 @@
+"""
+This script demonstrates the use of API's with the requests module. The
+script will generate a random Kanye West quote from https://api.kanye.rest.
+
+Author:        E. Taylor
+Date Created:  July 30, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, tkinter
+"""
+
 import requests
 from tkinter import *
 

@@ -1,3 +1,12 @@
+"""
+This script simulates the coffee machine using models from each class.
+
+Author:        E. Taylor
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  menu, coffee_maker, money_machine
+"""
+
 from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine

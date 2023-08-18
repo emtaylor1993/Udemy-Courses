@@ -1,4 +1,14 @@
-logo = """
+"""
+This script contains the ASCII art for the Number Guessing Game.
+
+Author:        E. Taylor
+Date Created:  July 21, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
+logo = \
+"""
 __    __                          __                                   ______                                          
 |  \  |  \                        |  \                                 /      \                                         
 | $$\ | $$ __    __  ______ ____  | $$____    ______    ______        |  $$$$$$\ __    __   ______    _______   _______ 

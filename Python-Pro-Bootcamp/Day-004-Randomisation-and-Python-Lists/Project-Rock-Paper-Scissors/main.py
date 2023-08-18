@@ -1,3 +1,13 @@
+"""
+This script simulates a game of rock, paper, scissors with
+the user and the computer.
+
+Author:        E. Taylor
+Date Created:  July 14, 2023
+Date Modified: August 17, 2023
+Dependencies:  random
+"""
+
 import random
 
 rock = '''
@@ -27,7 +37,7 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 options = [rock, paper, scissors]
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 

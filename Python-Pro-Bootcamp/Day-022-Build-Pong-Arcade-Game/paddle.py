@@ -1,3 +1,13 @@
+"""
+This script contains code for the Paddle class that inherits from the
+Turtle class. The paddle class can move up or down.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 from turtle import Turtle
 
 UPPER_BOUND = 250

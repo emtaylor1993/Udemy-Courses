@@ -1,3 +1,14 @@
+"""
+This script uses the turtle class to demonstrate key listeners
+and GUI programming. The key's "w", "a", "s", "d" are used as 
+movements.
+
+Author:        E. Taylor
+Date Created:  July 23, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle
+"""
+
 from turtle import Turtle, Screen
 
 turtle = Turtle()

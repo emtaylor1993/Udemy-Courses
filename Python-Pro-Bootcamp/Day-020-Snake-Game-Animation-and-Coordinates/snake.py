@@ -1,3 +1,13 @@
+"""
+This script contains code for the Snake class created from 3 turtle objects.
+The snake can move up, down, left or right.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle
+"""
+
 from turtle import Turtle
 
 STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]

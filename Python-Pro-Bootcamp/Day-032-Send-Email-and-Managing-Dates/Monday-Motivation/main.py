@@ -1,7 +1,16 @@
+"""
+This script contains a demonstration of using the smtplib Python module
+to send an email.
+
+Author:        E. Taylor
+Date Created:  July 29, 2023
+Date Modified: August 18, 2023
+Dependencies:  datetime, smtplib, random
+"""
+
 import datetime as dt
 import smtplib
 from random import choice
-import
 
 now = dt.datetime.now()
 day = now.strftime("%A")

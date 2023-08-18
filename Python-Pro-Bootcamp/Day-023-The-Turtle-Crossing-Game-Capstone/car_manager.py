@@ -1,3 +1,13 @@
+"""
+This script contains code for the CarManager class. The CarManager class
+generates random cards and moves them along the left of the screen.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle, random
+"""
+
 from turtle import Turtle
 from random import choice, randint
 

@@ -1,3 +1,13 @@
+"""
+This script allows the user to play Hangman based on a 
+preset group of random words.
+
+Author:        E. Taylor
+Date Created:  July 17, 2023
+Date Modified: August 17, 2023
+Dependencies:  random, hangman_art, hangman_words
+"""
+
 import random
 import hangman_art
 import hangman_words

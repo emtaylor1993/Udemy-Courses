@@ -1,8 +1,20 @@
+"""
+This script calculates the Caesar Cipher of a given message.
+
+Author:        E. Taylor
+Date Created:  July 18, 2023
+Date Modified: August 17, 2023
+Dependencies:  art
+"""
+
 from art import logo
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 restart = "yes"
 
+"""
+Decodes/Encodes a message with the Caesar Cipher algorithm.
+"""
 def caesar(start_text, shift_amount, cipher_direction):
   end_text = ""
   if shift_amount > 26:

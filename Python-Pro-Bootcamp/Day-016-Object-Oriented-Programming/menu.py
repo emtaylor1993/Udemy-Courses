@@ -1,3 +1,14 @@
+"""
+This script contains code relating to the Menu and Menu item class. 
+The class add's three types of coffee MenuItems to the Menu class. The
+Menu class can get items and find the requested drink.
+
+Author:        E. Taylor
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 class MenuItem:
     """Models each Menu Item."""
     def __init__(self, name, water, milk, coffee, cost):

@@ -1,3 +1,16 @@
+"""
+This script returns the number of days in a given month and year.
+
+Author:        E. Taylor
+Date Created:  July 19, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
+
+"""
+Takes in a year and returns True if it is a leap year and false
+otherwise.
+"""
 def is_leap(year):
   if year % 4 == 0:
     if year % 100 == 0:
@@ -10,6 +23,10 @@ def is_leap(year):
   else:
     return False
 
+"""
+Takes in a year and a month. Returns the number of days in the month
+and checks for February's leap year condition.
+"""
 def days_in_month(year, month):
   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
   if is_leap(year) and month == 2:

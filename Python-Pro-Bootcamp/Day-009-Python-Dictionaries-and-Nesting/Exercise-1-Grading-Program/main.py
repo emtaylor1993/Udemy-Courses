@@ -1,3 +1,13 @@
+"""
+This script creates an empty Python dictionary and populates it with preset
+values depending on the scores in the student_scores dictionary.
+
+Author:        E. Taylor
+Date Created:  July 18, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
+
 student_scores = {
   "Harry": 81,
   "Ron": 78,

@@ -1,6 +1,12 @@
-#########################################################################
-# Examples of using POST, PUT and DELETE using Pixela's API             #
-#########################################################################
+"""
+This script contains code that demonstrates the POST request command
+for the requests module.
+
+Author:        E. Taylor
+Date Created:  August 9, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, datetime
+"""
 
 import requests
 from datetime import datetime

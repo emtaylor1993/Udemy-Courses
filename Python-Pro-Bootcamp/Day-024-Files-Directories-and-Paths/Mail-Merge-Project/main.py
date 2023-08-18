@@ -1,11 +1,18 @@
+"""
+This script create a letter template from starting_letter.txt and sends it to
+each name in invited_names.txt. The letters are then saved into the ReadyToSend
+folder. This script illustrates Files/Directories examples within Python.
+
+Author:        E. Taylor
+Date Created:  July 25, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 # Create a letter using starting_letter.txt 
 # for each name in invited_names.txt
 # Replace the [name] placeholder with the actual name.
 # Save the letters in the folder "ReadyToSend".
-    
-#Hint1: This method will help you: https://www.w3schools.com/python/ref_file_readlines.asp
-#Hint2: This method will also help you: https://www.w3schools.com/python/ref_string_replace.asp
-#Hint3: THis method will help you: https://www.w3schools.com/python/ref_string_strip.asp
 
 letter_parts = []
 letter_names = []

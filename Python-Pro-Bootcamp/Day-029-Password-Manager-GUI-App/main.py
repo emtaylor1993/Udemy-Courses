@@ -1,3 +1,12 @@
+"""
+This script contains code for a GUI Password Manager Application.
+
+Author:        E. Taylor
+Date Created:  July 27, 2023
+Date Modified: August 18, 2023
+Dependencies:  tkinter, random, pyperclip
+"""
+
 from tkinter import *
 from tkinter import messagebox
 from random import choice, randint, shuffle

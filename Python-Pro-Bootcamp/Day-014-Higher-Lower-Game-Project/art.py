@@ -1,4 +1,15 @@
-logo = """
+"""
+This script contains the ASCII art used in the Higher/Lower Game Project.
+
+Author:        Angela Yu
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
+
+logo = \
+"""
     __  ___       __             
    / / / (_)___ _/ /_  ___  _____
   / /_/ / / __ `/ __ \/ _ \/ ___/
@@ -10,7 +21,8 @@ logo = """
 /_____/\____/|__/|__/\___/_/     
 """
 
-vs = """
+vs = \
+"""
  _    __    
 | |  / /____
 | | / / ___/

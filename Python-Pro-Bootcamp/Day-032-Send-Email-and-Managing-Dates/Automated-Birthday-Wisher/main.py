@@ -1,3 +1,13 @@
+"""
+This script contains code to send an automated birthday wish to the users
+in the birthdays CSV file on the actual date of their birthday.
+
+Author:        E. Taylor
+Date Created:  July 29, 2023
+Date Modified: August 18, 2023
+Dependencies:  datetime, pandas, random, smtplib
+"""
+
 from datetime import datetime
 import pandas
 import random

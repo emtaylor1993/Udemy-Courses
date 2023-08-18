@@ -1,3 +1,13 @@
+"""
+This script adds a country to the list of cities in the travelog as
+well as the number of visits.
+
+Author:        E. Taylor
+Date Created:  July 18, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
+
 travel_log = [
 {
   "country": "France",

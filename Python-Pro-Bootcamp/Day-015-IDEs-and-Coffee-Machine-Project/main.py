@@ -1,3 +1,13 @@
+"""
+This script simulates a coffee machine that produces a product based on
+the amount of money and coffee choice the user enters.
+
+Author:        E. Taylor
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 MENU = {
     "espresso": {
         "ingredients": {

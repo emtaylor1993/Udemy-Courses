@@ -1,11 +1,20 @@
-#If the bill was $150.00, split between 5 people, with 12% tip. 
+"""
+This script calculates the tip that should be added to the total
+bill, and determines how much each person should pay based on how
+many people are splitting it.
 
-#Each person should pay (150.00 / 5) * 1.12 = 33.6
-#Format the result to 2 decimal places = 33.60
+Author:        E. Taylor
+Date Created:  July 12, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
 
-#Tip: There are 2 ways to round a number. You might have to do some Googling to solve this.💪
+# If the bill was $150.00, split between 5 people, with 12% tip. 
 
-#Write your code below this line 👇
+# Each person should pay (150.00 / 5) * 1.12 = 33.6
+# Format the result to 2 decimal places = 33.60
+
+# Write your code below this line 👇
 print("Welcome to the tip calculator.")
 total = float(input("What was the total bill? $"))
 percentage = int(input("What percentage tip would you like to give? 10, 12, or 15? "))

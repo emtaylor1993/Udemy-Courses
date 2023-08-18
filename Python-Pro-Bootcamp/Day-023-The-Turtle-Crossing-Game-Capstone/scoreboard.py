@@ -1,3 +1,14 @@
+"""
+This script contains code for the Scoreboard class that inherits from the
+Turtle class. The Scoreboard class can update the score, udpate the level
+and initiate a game over sequence.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 from turtle import Turtle
 
 FONT = ("Courier", 12, "bold")

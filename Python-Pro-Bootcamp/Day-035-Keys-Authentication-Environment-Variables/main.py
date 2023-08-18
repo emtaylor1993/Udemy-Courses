@@ -1,14 +1,26 @@
+"""
+This script contains code that uses the requests module to get the weather
+forecase from Open Weather Map and uses the twilio.rest module to send a 
+text message to the user if rain is projected in the forecase.
+
+Author:        E. Taylor
+Date Created:  July 31, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, twilio.rest
+"""
+
+
 import requests
 from twilio.rest import Client
 
 # Open Weather Map Parameters
 LAT = 39.373730
 LON = -76.475433
-API_KEY = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Your API Key
+API_KEY = "" # Your API Key
 
 # Twilio Parameters
-ACCOUNT_SID = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" # Your Twilio Account SID
-AUTH_TOKEN = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"  # Your Twilio Account Authentication Token
+ACCOUNT_SID = "" # Your Twilio Account SID
+AUTH_TOKEN = "" # Your Twilio Account Authentication Token
 
 parameters = {
     "lat": LAT,
@@ -32,7 +44,7 @@ for hour_data in data_slice:
 if will_rain:
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     message = client.messages.create(
-        to="+11111111111", # Your Phone Number Here 
-        from="+11111111111", # Your Twilio Phone Number
+        to="", # Your Phone Number Here 
+        from_="", # Your Twilio Phone Number
         body="It's going to rain today. Remember to bring an umbrella."
     )

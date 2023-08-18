@@ -1,3 +1,12 @@
+"""
+This script contains the format of the Flight Data.
+
+Author:        E. Taylor
+Date Created:  August 9, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 class FlightData:
     def __init__(self, price, origin_city, origin_airport, destination_city, destination_airport, out_date, return_date):
         self.price = price

@@ -1,3 +1,12 @@
+"""
+This script contains code for the Pomodoro work model.
+
+Author:        E. Taylor
+Date Created:  July 27, 2023
+Date Modified: August 18, 2023
+Dependencies:  tkinter, math
+"""
+
 from tkinter import *
 import math
 

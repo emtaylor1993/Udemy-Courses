@@ -1,3 +1,13 @@
+"""
+This script contains code relating to the MoneyMachine class. This class
+handles everything transaction related in reference to the Coffee Machine.
+
+Author:        E. Taylor
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 class MoneyMachine:
     CURRENCY = "$"
 

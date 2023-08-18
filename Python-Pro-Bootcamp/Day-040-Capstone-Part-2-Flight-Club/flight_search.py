@@ -1,8 +1,18 @@
+"""
+This script talks to the Flight Search API and returns results based on the
+user's query. 
+
+Author:        E. Taylor
+Date Created:  August 10, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, flight_data
+"""
+
 import requests
 from flight_data import FlightData
 
 TEQUILA_ENDPOINT = "https://tequila-api.kiwi.com"
-TEQUILA_API_KEY = YOUR FLIGHT SEARCH API KEY
+TEQUILA_API_KEY = "" # Your Tequila API Key.
 
 class FlightSearch:
     def get_destination_code(self, city_name):

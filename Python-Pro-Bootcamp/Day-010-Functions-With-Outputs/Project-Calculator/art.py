@@ -1,4 +1,14 @@
-logo = """
+"""
+This script contains the ASCII art for the Calculator Project.
+
+Author:        Angela Yu
+Date Created:  July 19, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
+
+logo = \
+"""
  _____________________
 |  _________________  |
 | | Pythonista   0. | |  .----------------.  .----------------.  .----------------.  .----------------. 

@@ -1,3 +1,13 @@
+"""
+This script contains code to drive the Quiz Project by using models 
+for the questions and the quiz brain.
+
+Author:        E. Taylor
+Date Created:  July 23, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 from data import question_data
 from question_model import Question
 from quiz_brain import QuizBrain

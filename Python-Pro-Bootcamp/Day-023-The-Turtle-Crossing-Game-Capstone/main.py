@@ -1,3 +1,12 @@
+"""
+This script contains code that runs the Turtle Crossing Game.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 from turtle import Screen
 from car_manager import CarManager
 from player import Player, FINISH_LINE_Y

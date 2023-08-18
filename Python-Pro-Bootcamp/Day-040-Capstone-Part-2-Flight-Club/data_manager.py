@@ -1,7 +1,15 @@
-from pprint import pprint
+"""
+This script reads in a Google Sheet and updates it.
+
+Author:        E. Taylor
+Date Created:  August 10, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests
+"""
+
 import requests
 
-SHEETY_PRICES_ENDPOINT = YOUR SHEETY PRICES ENDPOINT
+SHEETY_PRICES_ENDPOINT = "" # Your Sheety Prices endpoint.
 
 class DataManager:
     def __init__(self):

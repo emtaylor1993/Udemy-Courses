@@ -1,3 +1,12 @@
+"""
+This script contains the data used within the game.
+
+Author:        Angela Yu
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 data = [
     {
         'name': 'Instagram',

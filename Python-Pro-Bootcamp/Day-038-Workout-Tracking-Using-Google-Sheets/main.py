@@ -1,3 +1,14 @@
+"""
+This script contains code that updates a spreadsheet based on workouts that 
+the user completed.
+
+Author:        E. Taylor
+Date Created:  August 9, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, os, datetime
+"""
+
+
 import requests
 import os
 from datetime import datetime

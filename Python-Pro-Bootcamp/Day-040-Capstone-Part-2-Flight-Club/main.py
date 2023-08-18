@@ -1,3 +1,12 @@
+"""
+This script drives the Flight Search engine. 
+
+Author:        E. Taylor
+Date Created:  August 10, 2023
+Date Modified: August 18, 2023
+Dependencies:  data_manager, flight_search, notification_manager, datetime
+"""
+
 from datetime import datetime, timedelta
 from data_manager import DataManager
 from flight_search import FlightSearch

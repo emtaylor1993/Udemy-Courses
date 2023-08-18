@@ -1,5 +1,16 @@
+"""
+This script contains code relating to the CoffeeMaker class. The
+CoffeeMaker can generate a report, check whether there are enough
+resources, and make the coffee.
+
+Author:        E. Taylor
+Date Created:  July 22, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 class CoffeeMaker:
-    """Models the machine that makes the coffee"""
+    """Models the machine that makes the coffee."""
     def __init__(self):
         self.resources = {
             "water": 300,

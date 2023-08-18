@@ -1,3 +1,13 @@
+"""
+This script contains code for the GUI representation of the quiz.
+
+Author:        E. Taylor
+Date Created:  July 30, 2023
+Date Modified: August 18, 2023
+Dependencies:  tkinter, quiz_brain
+"""
+
+
 from tkinter import *
 from quiz_brain import QuizBrain
 

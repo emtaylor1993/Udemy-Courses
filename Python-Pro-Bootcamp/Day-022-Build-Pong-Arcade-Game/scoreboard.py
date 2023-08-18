@@ -1,3 +1,14 @@
+"""
+This script contains code for the Scoreboard class that inherits from the
+Turtle class. The scoreboard class can update the scoreboardand  update either
+the left or right player's points.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle
+"""
+
 from turtle import Turtle
 
 class Scoreboard(Turtle):

@@ -1,3 +1,14 @@
+"""
+This script contains code for the Ball class that inherits from the
+Turtle class. The Ball class can move, bounce off of the y axis, bounce
+off of the x axis, and reset it's position.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle
+"""
+
 from turtle import Turtle
 
 class Ball(Turtle):

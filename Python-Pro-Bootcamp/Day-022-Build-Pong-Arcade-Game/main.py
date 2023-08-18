@@ -1,3 +1,12 @@
+"""
+This script contains the code to run the Pong Arcade Game.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle, paddle, ball, scoreboard, time
+"""
+
 from turtle import Screen, Turtle
 from paddle import Paddle
 from ball import Ball

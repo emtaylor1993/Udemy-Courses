@@ -1,3 +1,13 @@
+"""
+This script contains code that allows the user to guess the name of each 
+US State and populate it on the screen at the correct location.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle, pandas
+"""
+
 from turtle import Turtle, Screen
 import pandas as pd
 

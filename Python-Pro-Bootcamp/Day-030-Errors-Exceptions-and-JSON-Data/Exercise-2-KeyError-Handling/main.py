@@ -1,3 +1,12 @@
+"""
+This script demonstrates handling an KeyError exception.
+
+Author:        E. Taylor
+Date Created:  July 29, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
+
 facebook_posts = [
     {'Likes': 21, 'Comments': 2}, 
     {'Likes': 13, 'Comments': 2, 'Shares': 1}, 

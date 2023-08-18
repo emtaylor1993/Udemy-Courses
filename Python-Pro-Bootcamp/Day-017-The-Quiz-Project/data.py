@@ -1,3 +1,12 @@
+"""
+This script contains the question data to be used in the quiz.
+
+Author:        Angela Yu
+Date Created:  July 23, 2023
+Date Modified: August 18, 2023
+Dependencies:  None
+"""
+
 question_data = [
     {"text": "A slug's blood is green.", "answer": "True"},
     {"text": "The loudest animal is the African Elephant.", "answer": "False"},

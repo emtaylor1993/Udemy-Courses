@@ -1,3 +1,13 @@
+"""
+This script contains code that will email the user when the ISS is directly
+overhead their latitude and longitude.
+
+Author:        E. Taylor
+Date Created:  July 30, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, smtplib, time, datetime
+"""
+
 import requests
 import smtplib
 import time

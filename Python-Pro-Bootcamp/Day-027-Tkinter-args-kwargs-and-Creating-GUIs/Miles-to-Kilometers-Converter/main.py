@@ -1,3 +1,13 @@
+"""
+This script demonstrates GUI Programming by using the Tkinter module.
+The demo contains a miles to kilometer converter within a GUI.
+
+Author:        E. Taylor
+Date Created:  July 27, 2023
+Date Modified: August 18, 2023
+Dependencies:  tkinter
+"""
+
 from tkinter import *
 from tkinter import ttk
 

@@ -1,32 +1,42 @@
+"""
+This script talks to the Flight Search API and returns results based on the
+user's query. 
+
+Author:        E. Taylor
+Date Created:  August 9, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, flight_data
+"""
+
 import requests
 from flight_data import FlightData
 
 # Tequila API Information
 TEQUILA_ENDPOINT = "https://api.tequila.kiwi.com"
-TEQUILA_APIKEY = "5iF-JemfbCkSsFGyyPLlLEjyQiT2rzh-"
+TEQUILA_APIKEY = "" # Your Tequila API Key.
 
-#This class is responsible for talking to the Flight Search API.
+# This class is responsible for talking to the Flight Search API.
 class FlightSearch:
     def __init__(self):
         self.headers = {"apikey": TEQUILA_APIKEY}
         self.parameters = {"term": ""}
 
-    """
-    Queries the Tequila API and returns the IATA code for the city
-    that was searched for.
-    """
     def get_destination_code(self, city_name):
+        """
+        Queries the Tequila API and returns the IATA code for the city
+        that was searched for.
+        """
         self.parameters = {"term": f"{city_name}"}
         response = requests.get(f"{TEQUILA_ENDPOINT}/locations/query", params=self.parameters, headers=self.headers)
         data = response.json()
         code = data["locations"][0]["code"]
         return code
     
-    """
-    Searches the Tequila API based on the parameters given and returns information
-    about flights that match the criteria.
-    """    
     def search_flights(self, origin_city_code, destination_city_code, from_time, to_time):
+        """
+        Searches the Tequila API based on the parameters given and returns information
+        about flights that match the criteria.
+        """    
         headers = {"apikey": TEQUILA_APIKEY}
         parameters = {
             "fly_from": origin_city_code,

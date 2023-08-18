@@ -1,4 +1,15 @@
-#Number Guessing Game Objectives:
+"""
+This script simulates the number guessing game in which a player 
+continues to guess what number the computer is thinking within a
+certain number of turns.
+
+Author:        E. Taylor
+Date Created:  July 21, 2023
+Date Modified: August 18, 2023
+Dependencies:  art, random
+"""
+
+# Number Guessing Game Objectives:
 
 # Include an ASCII art logo.
 # Allow the player to submit a guess for a number between 1 and 100.

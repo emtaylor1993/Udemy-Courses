@@ -1,3 +1,13 @@
+"""
+This script contains code for the Food class. The Food class can refresh
+which places a food object in a random coordinate on the screen.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle, random
+"""
+
 from turtle import Turtle
 from random import randint
 

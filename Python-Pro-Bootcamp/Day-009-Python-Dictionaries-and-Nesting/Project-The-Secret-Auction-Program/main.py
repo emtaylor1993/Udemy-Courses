@@ -1,3 +1,12 @@
+"""
+This script calculates the highest bid out of a list of bidders.
+
+Author:        Emmanuel Taylor
+Date Created:  July 18, 2023
+Date Modified: August 17, 2023
+Dependencies:  replit, art
+"""
+
 from replit import clear
 from art import logo
 

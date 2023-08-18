@@ -1,3 +1,14 @@
+"""
+This script generates 6 turtle objects and moves them towards the right
+of the screen at random paces. The winning turtle is displayed when the
+race ends.
+
+Author:        E. Taylor
+Date Created:  July 23, 2023
+Date Modified: August 18, 2023
+Dependencies:  random, turtle
+"""
+
 from turtle import Turtle, Screen
 from random import randint
 

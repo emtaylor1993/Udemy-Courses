@@ -1,3 +1,13 @@
+"""
+This script contains code for the Player class that inherits from the
+Turtle class. The Turtle class can move and reset it's position.
+
+Author:        E. Taylor
+Date Created:  July 24, 2023
+Date Modified: August 18, 2023
+Dependencies:  turtle
+"""
+
 from turtle import Turtle
 
 STARTING_POSITION = (0, -280)

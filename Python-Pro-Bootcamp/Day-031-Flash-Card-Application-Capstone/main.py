@@ -1,3 +1,14 @@
+"""
+This script contains code for the Flash Card Application. The user
+will check whether they know the French translation of words in
+English.
+
+Author:        E. Taylor
+Date Created:  July 29, 2023
+Date Modified: August 18, 2023
+Dependencies:  pandas, random, tkinter
+"""
+
 import pandas as pd
 from random import choice
 from tkinter import *

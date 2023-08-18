@@ -1,3 +1,13 @@
+"""
+This script contains code that checks for an increase/decrease in a stock's value.
+If the value is +/- 5%, get the latest news article and send a text to the user.
+
+Author:        E. Taylor
+Date Created:  August 1, 2023
+Date Modified: August 18, 2023
+Dependencies:  requests, datetime, twilio.rest
+"""
+
 import requests
 import datetime as dt
 from twilio.rest import Client

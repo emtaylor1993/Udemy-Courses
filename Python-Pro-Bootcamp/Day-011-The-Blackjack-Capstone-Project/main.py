@@ -1,3 +1,12 @@
+"""
+This script simulates a game of Blackjack with the computer.
+
+Author:        E. Taylor
+Date Created:  July 20, 2023
+Date Modified: August 17, 2023
+Dependencies:  random, replit, art
+"""
+
 from random import choice
 from replit import clear
 from art import logo
@@ -17,6 +26,7 @@ def calculate_score(hand):
     return sum(hand)
     
 def compare(user_score, computer_score):
+    """Compares the user's score to the computer's score."""
     if user_score > 21 and computer_score > 21:
         return "You went over. You lose 😤"
     if user_score == computer_score:
@@ -35,6 +45,7 @@ def compare(user_score, computer_score):
         return "You lose 😤"
 
 def play_game():
+    """Activates the game simulation."""
     print(logo)
     user_cards = []
     comp_cards = []

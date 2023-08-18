@@ -1,3 +1,13 @@
+"""
+This script calculates the total pizza bill based on a series
+of inputs from the user.
+
+Author:        E. Taylor
+Date Created:  July 14, 2023
+Date Modified: August 17, 2023
+Dependencies:  None
+"""
+
 # 🚨 Don't change the code below 👇
 print("Welcome to Python Pizza Deliveries!")
 size = input("What size pizza do you want? S, M, or L ")
@@ -5,7 +15,7 @@ add_pepperoni = input("Do you want pepperoni? Y or N ")
 extra_cheese = input("Do you want extra cheese? Y or N ")
 # 🚨 Don't change the code above 👆
 
-#Write your code below this line 👇
+# Write your code below this line 👇
 bill = 0
 
 if size == "S":
