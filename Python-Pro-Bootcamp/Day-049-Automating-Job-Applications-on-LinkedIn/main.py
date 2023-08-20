@@ -1,6 +1,6 @@
 """
 This script demonstrate the use of Python's selenium package to automatically
-fill out forms on a live website.
+apply to jobs on LinkedIn. Simply replace the URL with the job application URL.
 
 Author:        E. Taylor
 Date Created:  August 20, 2023
