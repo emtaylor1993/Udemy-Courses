@@ -29,5 +29,22 @@ describe('My First Test Suite', function() {
                 cy.wrap($el).find("button").click()
             }
         })
+
+        // Assert if logo text is correctly displayed.
+        cy.get(".brand").should("have.text", "GREENKART")
+
+        // If you want to use a variable and then extract the text from that variable,
+        // you must manually handle the promise.
+        cy.get(".brand").then(function(logo) {
+            cy.log(logo.text())
+        })
+
+        // This will not work. It confuses Cypress.
+        // const logo = cy.get(".brand")
+        // cy.log(logo.text())
+
+        // Aliasing example.
+        cy.get(".products").as("productLocator")
+        cy.get("@productLocator").find(".product").should("have.length", 4)
     })
 })
