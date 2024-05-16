@@ -1,7 +1,7 @@
 /// <reference types="Cypress" />
 
-// This test suite will illustrate how to find web elements based on CSS selectors
-// and navigate pages using buttons.
+// This test suite will illustrate how to handle UI elements such as checkboxes,
+// static and dynamic dropdowns, visible and invisible elements and radio buttons.
 describe('My Third Test Suite', function() {
     it('My Third Test Case', function() {
         cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
