@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
 // Cypress - Test files are called Specs
+// This test suite will illustrate the core concepts and methods of Cypress.
 describe('My First Test Suite', function() {
     it('My First Test Case', function() {
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")

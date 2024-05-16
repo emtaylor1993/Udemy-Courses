@@ -1,6 +1,7 @@
 /// <reference types="Cypress" />
 
-// Cypress - Test files are called Specs
+// This test suite will illustrate how to find web elements based on CSS selectors
+// and navigate pages using buttons.
 describe('My Second Test Suite', function() {
     it('My Second Test Case', function() {
         cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
