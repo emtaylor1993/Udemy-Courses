@@ -4,7 +4,7 @@
 // This test suite will illustrate the core concepts and methods of Cypress.
 describe('My First Test Suite', function() {
     it('My First Test Case', function() {
-        cy.visit("https://rahulshettyacademy.com/seleniumPractise/#/")
+        cy.visit(Cypress.env("url") + "/seleniumPractise/#/")
         cy.get(".search-keyword").type("ca")
         cy.wait(2000)
 

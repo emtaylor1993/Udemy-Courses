@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run",
+    "headed": "npx cypress run --headed",
+    "chromeTest": "npx cypress run --browser chrome",
+    "record": "npx cypress run --record --key a50f9f80-5977-4dc7-b464-a98975139cf9",
+    "GreenKartTest": "npx cypress run --spec 'cypress/integration/GreenKart/*",
+    "SmokeTest": "npx cypress run --spec 'cypress/integration/GreenKart/Test1.js'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.9.0",
-    "cypress-iframe": "^1.0.1"
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }

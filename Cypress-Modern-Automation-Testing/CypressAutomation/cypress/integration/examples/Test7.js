@@ -4,7 +4,7 @@
 // instead of the remove target method.
 describe('My Seventh Test Suite', function() {
     it('My Seventh Test Case', function() {
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice")
+        cy.visit(Cypress.env("url") + "/AutomationPractice/")
         cy.get("#opentab").then(function(e1) {
             const url = e1.prop("href")
             cy.visit(url)

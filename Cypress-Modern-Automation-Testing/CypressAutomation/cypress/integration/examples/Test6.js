@@ -4,7 +4,7 @@
 // options.
 describe('My Sixth Test Suite', function() {
     it('My Sixth Test Case', function() {
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+        cy.visit(Cypress.env("url") + "/AutomationPractice/")
 
         // Shows an example of using JQuery to show the options of a mouse hover object.
         // It then clicks on it and checks the URL.

@@ -4,7 +4,7 @@
 // capture strings from these popups, handling tabs and new domains.
 describe('My Fourth Test Suite', function() {
     it('My Fourth Test Case', function() {
-        cy.visit("https://rahulshettyacademy.com/AutomationPractice/")
+        cy.visit(Cypress.env("url") + "/AutomationPractice/")
 
         // Alert and Confirm popup examples.
         cy.get('#alertbtn').click()
