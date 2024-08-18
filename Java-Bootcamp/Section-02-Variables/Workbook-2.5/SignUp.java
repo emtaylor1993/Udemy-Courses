@@ -1,3 +1,16 @@
+/**
+ * SIGN UP
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that acts as a sign up page for
+ *    the "JavaGram" application.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class SignUp {

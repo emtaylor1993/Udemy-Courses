@@ -1,3 +1,16 @@
+/**
+ * TYPE CONVERSION
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's type
+ *    casting ability (double to int).
+ * 
+ * @packages
+ *    None
+ */
+
 public class TypeConversion {
     public static void main(String[] args) {
         int ants = 2000;

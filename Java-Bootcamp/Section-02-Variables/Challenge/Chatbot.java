@@ -1,3 +1,16 @@
+/**
+ * CHATBOT
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a chatbot that holds a conversation
+ *    with the User and accepting the User's answers as variables.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class Chatbot {

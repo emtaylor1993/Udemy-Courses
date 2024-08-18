@@ -1,3 +1,15 @@
+/**
+ * WHOLE NUMBERS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's long type.
+ * 
+ * @packages
+ *    None
+ */
+
 public class WholeNumbers {
     public static void main(String[] args) {
         long globalPopulation = 8_000_000_000L;

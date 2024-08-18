@@ -1,3 +1,16 @@
+/**
+ * DECIMALS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java mathematic operations
+ *    with decimals.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Decimals {
     public static void main(String[] args) {
         double percentage = 73.5;

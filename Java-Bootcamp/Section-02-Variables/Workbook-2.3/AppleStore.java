@@ -1,3 +1,16 @@
+/**
+ * APPLE STORE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a store selling apples and
+ *    updating the apple quantity as needed when purchases are made.
+ * 
+ * @packages
+ *    None
+ */
+
 public class AppleStore {
     public static void main(String[] args) {
         int numOfApples = 0;

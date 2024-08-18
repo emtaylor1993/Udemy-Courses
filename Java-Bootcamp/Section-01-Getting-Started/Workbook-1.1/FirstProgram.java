@@ -1,5 +1,15 @@
-// I'm a comment. I have no impact on your code.
-// Instructions for this workbook are on Learn the Part (See the Udemy Video: Workbook 1.1 to access the link).
+/**
+ * WORKBOOK 1.1 - FIRST PROGRAM
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java print statements.
+ *    This program simply outputs a few print statements.
+ * 
+ * @packages
+ *    None
+ */
 
 public class FirstProgram {
     public static void main(String[] args) {

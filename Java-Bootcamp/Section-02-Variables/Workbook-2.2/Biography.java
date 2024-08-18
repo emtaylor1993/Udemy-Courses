@@ -1,3 +1,16 @@
+/**
+ * BIOGRAPHY
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates using variables within
+ *    String statements to form a biography.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Biography {
     public static void main(String[] args) {
         String name = "Emmanuel";

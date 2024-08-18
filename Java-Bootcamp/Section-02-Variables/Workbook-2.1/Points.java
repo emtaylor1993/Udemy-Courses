@@ -1,3 +1,16 @@
+/**
+ * POINTS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a points system at the
+ *    Hogwarts School for Witchcraft and Wizardry.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Points {
     public static void main(String[] args) {
         int points = 0;

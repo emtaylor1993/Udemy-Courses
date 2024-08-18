@@ -1,3 +1,16 @@
+/**
+ * MEETING
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a profit meeting within
+ *    a company. It uses the type casting functionality.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Meeting {
     public static void main(String[] args) {
         double sales = 24309.65; 

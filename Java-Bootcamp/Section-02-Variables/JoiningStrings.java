@@ -1,3 +1,15 @@
+/**
+ * JOINING STRINGS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java String concatenation.
+ * 
+ * @packages
+ *    None
+ */
+
 public class JoiningStrings {
     public static void main(String[] args) {
         int year = 2010;

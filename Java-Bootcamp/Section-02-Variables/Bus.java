@@ -1,3 +1,16 @@
+/**
+ * BUS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's incrementing functionality
+ *    with variables.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Bus {
     public static void main(String[] args) {
         int passengers = 0;

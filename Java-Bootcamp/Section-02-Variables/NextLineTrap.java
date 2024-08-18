@@ -1,3 +1,16 @@
+/**
+ * NEXT LINE TRAP
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates the "next line" trap
+ *    that can occur using the Scanner class.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class NextLineTrap {

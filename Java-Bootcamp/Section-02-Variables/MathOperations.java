@@ -1,9 +1,22 @@
+/**
+ * MATH OPERATIONS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's built in
+ *    Mathematic Operations.
+ * 
+ * @packages
+ *    None
+ */
+
 public class MathOperations {
     public static void main(String[] args) {
         int bagOfSweets1 = 5;
         int bagOfSweets2 = 10;
 
-        long starsInMilkyWay = 250_000_000_000L; //250 billion
+        long starsInMilkyWay = 250_000_000_000L; // 250 billion
         long starsInAndromeda = 1_000_000_000_000L; // 1 trillion
 
         double testScore = 6.7;

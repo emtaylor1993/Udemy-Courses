@@ -1,3 +1,16 @@
+/**
+ * SURVEY
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's built-in
+ *    Scanner class that accepts user input.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class Survey {
@@ -7,7 +20,6 @@ public class Survey {
 
         //*********PART A: PICKING UP THE USER'S ANSWERS*********
         System.out.println("Welcome. Thank you for taking the survey");
-
         System.out.println("\nWhat is your name?");
         String name = scanner.nextLine();
         counter++;
@@ -27,7 +39,6 @@ public class Survey {
         System.out.println("\nHow many times a week do you buy fast food?");
         int foodAmount = scanner.nextInt();
         counter++;
-
         scanner.close();
 
         //*********PART B: RESPONDING TO THE USER**********

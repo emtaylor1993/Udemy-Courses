@@ -1,3 +1,16 @@
+/**
+ * VARIABLES
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates storing and 
+ *    printing integer variables.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Variables {
     public static void main(String[] args) {
         int passengers = 5;

@@ -1,5 +1,16 @@
-public class Debugging {
+/**
+ * DEBUGGING
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's debug functionality.
+ * 
+ * @packages
+ *    None
+ */
 
+public class Debugging {
     public static void main(String[] args) {
         /************** Debugging **************/
         int exam1Score = 85;
