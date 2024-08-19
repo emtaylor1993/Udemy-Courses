@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java Polymorphism.
+ * 
+ * @packages
+ *    Shape (Cylinder, Sphere)
+ */
+
 import shape.Cylinder;
 import shape.Sphere;
 

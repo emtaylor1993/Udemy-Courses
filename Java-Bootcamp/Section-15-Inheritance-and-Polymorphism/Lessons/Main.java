@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java polymorphism.
+ * 
+ * @packages
+ *    Product (Pants, Product, Shirt, ShirtSize)
+ */
+
 import product.Pants;
 import product.Product;
 import product.Shirt;

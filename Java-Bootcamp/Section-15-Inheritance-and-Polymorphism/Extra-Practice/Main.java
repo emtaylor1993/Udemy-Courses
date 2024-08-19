@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Laboratory environment.
+ * 
+ * @packages
+ *    Model (Centrifuge, Lab, LabEquipment, Microscope)
+ */
+
 import model.Centrifuge;
 import model.Lab;
 import model.LabEquipment;
