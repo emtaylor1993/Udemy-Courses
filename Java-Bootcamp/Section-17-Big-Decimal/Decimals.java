@@ -1,3 +1,15 @@
+/**
+ * DECIMALS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java BigDecimals.
+ * 
+ * @packages
+ *    Java Math (BigDecimal)
+ */
+
 import java.math.BigDecimal;
 
 public class Decimals {

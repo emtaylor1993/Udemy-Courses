@@ -1,3 +1,17 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates how to use higher order 
+ *    functions with data sources.
+ * 
+ * @packages
+ *    Java IO (IOException)
+ *    Java New IO (Files, Path, Paths)
+ */
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

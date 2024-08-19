@@ -1,3 +1,17 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates creating streams from a data source.
+ * 
+ * @packages
+ *    Java IO (IOException)
+ *    Java New IO (Files, Path, Paths)
+ *    Java Utilities (Arrays)
+ */
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

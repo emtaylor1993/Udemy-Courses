@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java Lists as higher order functions.
+ * 
+ * @packages
+ *    Java Utilities (Arrays, List)
+ */
+
 import java.util.Arrays;
 import java.util.List;
 

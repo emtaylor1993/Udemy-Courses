@@ -1,3 +1,16 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Movie Store.
+ * 
+ * @packages
+ *    Java Utilities (List)
+ *    Model (Movie, MovieStore)
+ */
+
 import java.util.List;
 import model.Movie;
 import model.MovieStore;

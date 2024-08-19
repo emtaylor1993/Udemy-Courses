@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates how to use Java Maps with streams.
+ * 
+ * @packages
+ *    Java Utilities (Map, HashMap)
+ */
+
 import java.util.Map;
 import java.util.HashMap;
 

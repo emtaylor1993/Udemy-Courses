@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java Maps with higher order functions.
+ * 
+ * @packages
+ *    Java Utilities (HashMap, Map)
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 

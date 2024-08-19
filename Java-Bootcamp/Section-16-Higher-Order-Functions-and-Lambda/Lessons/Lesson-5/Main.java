@@ -1,3 +1,16 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates higher order conditional
+ *    statements with Java Lists.
+ * 
+ * @packages
+ *    Java Utilities (Arrays, List)
+ */
+
 import java.util.Arrays;
 import java.util.List;
 

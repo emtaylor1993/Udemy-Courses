@@ -1,3 +1,17 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Payment system.
+ * 
+ * @packages
+ *    Java Time (LocalDate)
+ *    Java Time Format (DateTimeFormatter)
+ *    Java Utilities (Arrays, Lists)
+ */
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
