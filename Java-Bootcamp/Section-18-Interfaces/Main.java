@@ -1,9 +1,26 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Bank.
+ * 
+ * @packages
+ *    Java IO (IOException)
+ *    Java Math (BigDecimal)
+ *    Java New IO (Files, Path, Paths)
+ *    Constants (AccountType, Transaction)
+ *    POJO (Checking, Credit)
+ *    Repository (AccountRepository)
+ *    Service (AccountService, CheckingService, CreditService)
+ */
+
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
 import constants.AccountType;
 import constants.Transaction;
 import pojo.Checking;
@@ -29,6 +46,12 @@ public class Main {
         }
     }
 
+    /**
+     * Function Name: loadAccounts
+     * @throws IOException
+     * 
+     * Creates the Bank Accounts.
+     */
     public static void loadAccounts() throws IOException {
         Files.lines(paths[0])
             .forEach(line -> {
@@ -42,6 +65,12 @@ public class Main {
         );
     }
 
+    /**
+     * Function Name: applyTransactions
+     * @throws IOException
+     * 
+     * Performs transactions against the created accounts.
+     */
     public static void applyTransactions() throws IOException {
         Files.lines(paths[1])
             .forEach(line -> {
@@ -57,6 +86,12 @@ public class Main {
         });
     }
 
+    /**
+     * Function Name: finalTest
+     * @throws IOException
+     * 
+     * Tests the results of the performed transactions.
+     */
     public static void finalTest() throws IOException {
         System.out.println("Account A1234B Balance: " + checkingService.retrieveAccount("A1234B").getBalance());
         System.out.println("Account E3456F Balance: " + checkingService.retrieveAccount("E3456F").getBalance());

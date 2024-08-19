@@ -1,3 +1,15 @@
+/**
+ * ACCOUNT SERVICE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents the AccountService object.
+ * 
+ * @packages
+ *    Java Math (BigDeciaml)
+ */
+
 package service;
 
 import java.math.BigDecimal;
