@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents a Sign Up page.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class Main {

@@ -1,3 +1,15 @@
+/**
+ * COMMON EXCEPTIONS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java common runtime exceptions.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class CommonExceptions {

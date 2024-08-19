@@ -1,3 +1,15 @@
+/**
+ * MAGAZINE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents a Magazine object.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Magazine {
     private String title;
     private String publisher;
@@ -21,6 +33,13 @@ public class Magazine {
         setPublicationYear(publicationYear);
     }
 
+    /**
+     * Constructor Name: Magazine
+     * @param source (Magazine)
+     * 
+     * Inside the Constructor
+     *  1. Using setters in the function to ensure argument validation happens.
+     */
     public Magazine(Magazine source) {
         setTitle(source.title);
         setPublisher(source.publisher);
@@ -28,6 +47,13 @@ public class Magazine {
         setPublicationYear(source.publicationYear);
     }
 
+    /**
+     * Getter Name: getTitle
+     * @return (String)
+     * 
+     * Inside the Getter
+     *  1. Gets the title of the Magazine.
+     */
     public String getTitle() {
         return this.title;
     }
@@ -46,6 +72,13 @@ public class Magazine {
         this.title = title;
     }
 
+    /**
+     * Getter Name: getPublisher
+     * @return (String)
+     * 
+     * Inside the Getter
+     *  1. Gets the publisher of the Magazine.
+     */
     public String getPublisher() {
         return this.publisher;
     }
@@ -64,6 +97,13 @@ public class Magazine {
         this.publisher = publisher;
     }
 
+    /**
+     * Getter Name: getIssueNumber
+     * @return (iny)
+     * 
+     * Inside the Getter
+     *  1. Gets the issue number of the Magazine.
+     */
     public int getIssueNumber() {
         return this.issueNumber;
     }
@@ -82,6 +122,13 @@ public class Magazine {
         this.issueNumber = issueNumber;
     }
 
+    /**
+     * Getter Name: getPublicationYear
+     * @return (int)
+     * 
+     * Inside the Getter
+     *  1. Gets the publication year of the Magazine.
+     */
     public int getPublicationYear() {
         return this.publicationYear;
     }

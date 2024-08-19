@@ -1,3 +1,16 @@
+/**
+ * EXAMPLE ONE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates a FileNotFoundException.
+ * 
+ * @packages
+ *    Java IO (FileInputStream, FileNotFoundException)
+ *    Java Utilities (Scanner)
+ */
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

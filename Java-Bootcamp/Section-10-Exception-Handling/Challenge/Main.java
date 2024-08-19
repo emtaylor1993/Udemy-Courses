@@ -1,3 +1,16 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents a Movie store.
+ * 
+ * @packages
+ *    Java IO (FileInputStream, FileNotFoundException)
+ *    Java Utilities (Scanner)
+ */
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
@@ -15,6 +28,11 @@ public class Main {
         }
     }
 
+    /**
+     * Function Name: userInput
+     * 
+     * Gathers Movie information from the User.
+     */
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
         String status = "continue";
@@ -33,6 +51,13 @@ public class Main {
         scanner.close();
     }
 
+    /**
+     * Function Name: promptForChoice
+     * @param scanner (Scanner)
+     * @return        (int)
+     * 
+     * Asks the user to choose a number between 0 and 9.
+     */
     public static int promptForChoice(Scanner scanner) {
         while (true) {
             System.out.print("\nPlease choose an integer between 0 - 9: ");
@@ -45,6 +70,13 @@ public class Main {
         }
     }
 
+    /**
+     * Function Name: incorrectChoice
+     * @param choice (int)
+     * @return       (boolean)
+     * 
+     * Checks whether the User made a valid integer choice.
+     */
     public static boolean incorrectChoice(int choice) {
         if (choice < 0 || choice > 9) {
             return true;
@@ -53,6 +85,14 @@ public class Main {
         return false;
     }
 
+    /**
+     * Function Name: promptForRating
+     * @param scanner (Scanner)
+     * @param name    (String)
+     * @return        (double)
+     * 
+     * Asks the User to enter a new rating for the movie.
+     */
     public static double promptForRating(Scanner scanner, String name) {
         while (true) {
             System.out.print("\nSet a new rating for " + name + ": ");
@@ -65,6 +105,13 @@ public class Main {
          }
     }
 
+    /**
+     * Function Name: incorrectRating
+     * @param rating (double)
+     * @return       (boolean)
+     * 
+     * Checks whether the User made a valid rating entry.
+     */
     public static boolean incorrectRating(double rating) {
         if (rating < 0 || rating > 10) {
             return true;
@@ -73,6 +120,13 @@ public class Main {
         return false;
     }
 
+    /**
+     * Function Name: loadMovies
+     * @param fileName (String)
+     * @throws FileNotFoundException
+     * 
+     * Load the list of movies from the movies.txt file.
+     */
     public static void loadMovies(String fileName) throws FileNotFoundException {
         FileInputStream fis = new FileInputStream(fileName);
         Scanner scanFile = new Scanner(fis);
@@ -85,6 +139,11 @@ public class Main {
         scanFile.close();
     }
 
+    /**
+     * Function Name: printStore
+     * 
+     * Prints the contents of the Movie store.
+     */
     public static void printStore() {
         System.out.println("********************************MOVIE STORE*******************************");
         System.out.println(store);
