@@ -1,6 +1,18 @@
-import java.util.Scanner;
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Car Dealership.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ *    Constants (BodyType, Constance)
+ *    Model (Car, CarDealership)
+ */
 
-// Import user-defined packages.
+import java.util.Scanner;
 import constants.BodyType;
 import constants.Constants;
 import model.Car;

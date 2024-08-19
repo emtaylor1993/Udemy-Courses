@@ -1,3 +1,17 @@
+/**
+ * GAME
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's static keyword.
+ * 
+ * @packages
+ *    Java Time (LocalDate)
+ *    Constants (Position, Regulation)
+ *    Java Time Format (DateTimeFormatter)
+ */
+
 import java.time.LocalDate;
 import constants.Position;
 import static constants.Regulation.*;
@@ -7,11 +21,24 @@ public class Game {
     private String arena;
     private LocalDate date;
 
+    /**
+     * Function Name: Game
+     * @param arena (String)
+     * 
+     * Constructor for the Game object.
+     */
     public Game(String arena) {
         this.arena = arena;
         this.date = LocalDate.now();
     }
 
+    /**
+     * Function Name: begin
+     * @param home (Team)
+     * @param away (Team)
+     * 
+     * Prints out the information for the Game.
+     */
     public void begin(Team home, Team away) {
         // String formattedDate = this.date.getDayOfMonth() + "/" + this.date.getMonthValue() + "/" + this.date.getYear();
         String formattedDate = this.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
@@ -28,6 +55,12 @@ public class Game {
         );
     }
 
+    /**
+     * Function Name: details
+     * @return (String)
+     * 
+     * Returns the details of the Regulation Game.
+     */
     public String details() {
         return
             "\nArena: " + this.arena + 

@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Regulation Basketball Game.
+ * 
+ * @packages
+ *    Constants (Position)
+ */
+
 import constants.Position;
 
 public class Main {

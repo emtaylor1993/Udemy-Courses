@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Car driving.
+ * 
+ * @packages
+ *    Model (Car, TrafficLight)
+ */
+
 import model.Car;
 import static model.Car.TrafficLight.*;
 
