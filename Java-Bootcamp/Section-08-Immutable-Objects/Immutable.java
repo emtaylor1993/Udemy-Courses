@@ -1,3 +1,15 @@
+/**
+ * IMMUTABLE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java immutable objects.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Immutable {
     public static void main(String[] args) {        
         int apples = 5;

@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents a Book store.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Main {
     public static void main(String[] args) {
         Book book1 = new Book("To Kill a Mockingbird", "Harper Lee", 4.27, 15.99);

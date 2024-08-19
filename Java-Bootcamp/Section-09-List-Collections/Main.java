@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates a Java ArrayList.
+ * 
+ * @packages
+ *    Java Utilities (ArrayList)
+ */
+
 import java.util.ArrayList;
 
 public class Main {

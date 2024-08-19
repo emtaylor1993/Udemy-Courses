@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents a Movie Store.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ */
+
 import java.util.Scanner;
 
 public class Main {
@@ -27,6 +39,11 @@ public class Main {
         userInput();
     }
 
+    /**
+     * Function Name: userInput
+     * 
+     * Gathers Movie input from the User.
+     */
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
 
@@ -46,6 +63,11 @@ public class Main {
         scanner.close();
     }
 
+    /**
+     * Function Name: printStore
+     * 
+     * Print the contents of the Movie store.
+     */
     public static void printStore() {
         System.out.println("********************************MOVIE STORE*******************************");
         System.out.println(store);

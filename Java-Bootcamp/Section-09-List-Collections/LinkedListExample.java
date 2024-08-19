@@ -1,3 +1,15 @@
+/**
+ * LINKED LIST EXAMPLE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents a Java LinkedList.
+ * 
+ * @packages
+ *    Java Utilities (LinkedList, List)
+ */
+
 import java.util.LinkedList;
 import java.util.List;
 

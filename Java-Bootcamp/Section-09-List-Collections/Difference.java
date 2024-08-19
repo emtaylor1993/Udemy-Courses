@@ -1,3 +1,16 @@
+/**
+ * DIFFERENCE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates the difference between Java
+ *    ArrayLists and LinkedLists.
+ * 
+ * @packages
+ *    Java Utilities (ArrayList, LinkedList, List)
+ */
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

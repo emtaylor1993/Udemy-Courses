@@ -1,3 +1,15 @@
+/**
+ * ARRAY LIST EXAMPLE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates a Java ArrayList.
+ * 
+ * @packages
+ *    Java Utilities (ArrayList, List)
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
