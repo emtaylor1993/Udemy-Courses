@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's final keyword.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Main {
     public static void main(String[] args) {
         Employee john = new Employee("John", 45);

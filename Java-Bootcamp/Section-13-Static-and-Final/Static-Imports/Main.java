@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java's static import.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Main {
     public static void main(String[] args) {
         Circle circle = new Circle(2.5);

@@ -1,3 +1,15 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a Basketball game.
+ * 
+ * @packages
+ *    None
+ */
+
 public class Main {
     public static void main(String[] args) {
         Team bulls = new Team("Chicago Bulls");

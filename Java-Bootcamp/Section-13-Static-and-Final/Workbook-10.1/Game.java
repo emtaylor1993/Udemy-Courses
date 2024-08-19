@@ -1,3 +1,17 @@
+/**
+ * GAME
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that represents the Game object.
+ * 
+ * @packages
+ *    Java Time (LocalDate)
+ *    Java Time Format (DateTimeFormatter)
+ *    Constants (Regulation)
+ */
+
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import static constants.Regulation.*;
@@ -6,11 +20,24 @@ public class Game {
     private String arena;
     private LocalDate date;
 
+    /**
+     * Function Name: Game
+     * @param arena (String)
+     * 
+     * Constructor for the Game object.
+     */
     public Game(String arena) {
         this.arena = arena;
         this.date = LocalDate.now();
     }
 
+    /**
+     * Function Name:
+     * @param home (Team)
+     * @param away (Team)
+     * 
+     * Prints out the results of the game start.
+     */
     public void begin(Team home, Team away) {
         // String formattedDate = this.date.getDayOfMonth() + "/" + this.date.getMonthValue() + "/" + this.date.getYear();
         String formattedDate = this.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
@@ -26,7 +53,13 @@ public class Game {
 
         );
     }
-
+    
+    /**
+     * Function Name:
+     * @return (String)
+     * 
+     * Prints the details of the Game.
+     */
     public String details() {
         return
             "\nArena: " + this.arena + 

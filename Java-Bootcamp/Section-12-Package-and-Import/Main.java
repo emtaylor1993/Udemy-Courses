@@ -1,5 +1,5 @@
 /**
- * Main
+ * MAIN
  * 
  * @author Emmanuel Taylor
  * 

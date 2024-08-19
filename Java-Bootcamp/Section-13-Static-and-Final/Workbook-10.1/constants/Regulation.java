@@ -1,3 +1,15 @@
+/**
+ * CONSTANTS
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that contains constants for the Game.
+ * 
+ * @packages
+ *    None
+ */
+
 package constants;
 
 public class Regulation {
