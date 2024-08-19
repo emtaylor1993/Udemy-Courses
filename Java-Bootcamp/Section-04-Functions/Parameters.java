@@ -17,6 +17,13 @@ public class Parameters {
         calculateArea(2.6, 4.2);
     }
 
+    /**
+     * Function Name: calculateArea
+     * @param length (double)
+     * @param width  (double)
+     * 
+     * Calculates the area of a rectangle.
+     */
     public static void calculateArea(double length, double width) {
         double area = length * width;
         System.out.println("Area: " + area);

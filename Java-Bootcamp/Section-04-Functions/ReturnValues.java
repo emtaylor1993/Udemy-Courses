@@ -19,11 +19,27 @@ public class ReturnValues {
         printArea(2.3, 3.6, area);
     }
 
+    /**
+     * Function Name: calculateArea
+     * @param length (double)
+     * @param width  (double)
+     * @return       (double)
+     * 
+     * Calculates the area of a rectangle.
+     */
     public static double calculateArea(double length, double width) {
         double area = length * width;
         return area;
     }
 
+    /**
+     * Function Name: explainArea
+     * @param language (String)
+     * @return         (String)
+     * 
+     * Explains how the area is calculated depending on
+     * the language chosen.
+     */
     public static String explainArea(String language) {
         switch(language) {
             case "English": return "Area equals length * width";
@@ -33,6 +49,14 @@ public class ReturnValues {
         }
     }
 
+    /**
+     * Function Name: printArea
+     * @param length (double)
+     * @param width  (double)
+     * @param area   (double)
+     * 
+     * Prints the area of a rectangle.
+     */
     public static void printArea(double length, double width, double area) {
         System.out.println("A rectangle with a length of " + length + " and a width of " + width + " has an area of " + area);
     }

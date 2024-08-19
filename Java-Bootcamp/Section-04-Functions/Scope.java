@@ -24,12 +24,26 @@ public class Scope {
         calculatePerimeter(length, width);
     }
 
+    /**
+     * Function Name: calculateArea
+     * @param param1 (double)
+     * @param param2 (double)
+     * 
+     * Calculates the area of a rectangle.
+     */
     public static void calculateArea(double param1, double param2) {
         // Local variable to store the area (accessible only within this function)
         double area = param1 * param2;
         System.out.println("Area of the rectangle: " + area);
     }
 
+    /**
+     * Function Name: calculatePerimeter
+     * @param param1 (double)
+     * @param param2 (double)
+     * 
+     * Calculates the perimeter of a rectangle.
+     */
     public static void calculatePerimeter(double param1, double param2) {
         // Local variable to store the perimeter (accessible only within this function)
         double perimeter = 2 * (param1 + param2);

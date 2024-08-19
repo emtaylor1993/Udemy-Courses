@@ -42,18 +42,50 @@ public class DiceJack {
         scan.close();
     }
 
+    /**
+     * Function Name: areLessThanOne
+     * @param num1 (int)
+     * @param num2 (int)
+     * @param num3 (int)
+     * @return     (boolean)
+     * 
+     * Returns true if any parameters are less than one.
+     */
     public static boolean areLessThanOne(int num1, int num2, int num3) {
         return (num1 < 1 || num2 < 1 || num3 < 1); 
     }
 
+    /**
+     * Function Name: areHigherThanSix
+     * @param num1 (int)
+     * @param num2 (int)
+     * @param num3 (int)
+     * @return     (boolean)
+     * 
+     * Returns true if any parameters are greater than six.
+     */
     public static boolean areHigherThanSix(int num1, int num2, int num3) {
         return (num1 > 6 || num2 > 6 || num3 > 6);
     }
 
+    /**
+     * Function Name: userWon
+     * @param sumNumbers   (int)
+     * @param sumDiceRolls (int)
+     * @return             (boolean)
+     * 
+     * Returns true if the user won.
+     */
     public static boolean userWon(int sumNumbers, int sumDiceRolls) {
         return (sumNumbers > sumDiceRolls && sumNumbers - sumDiceRolls < 3);
     }
 
+    /**
+     * Function Name: rollDice
+     * @return (int)
+     * 
+     * Returns a random number between 1 and 6.
+     */
     public static int rollDice() {
         double randomNumber = Math.random() * 6;
         randomNumber += 1;

@@ -19,6 +19,11 @@ public class Chorus {
         singChorus();
     }
 
+    /**
+     * Function Name: singChorus
+     * 
+     * Prints out the lyrics to the chorus.
+     */
     public static void singChorus() {
         System.out.println("Don't blame it on the sunshine");
         System.out.println("Don't blame it on the moonlight");
