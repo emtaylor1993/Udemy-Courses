@@ -1,3 +1,15 @@
+/**
+ * Main
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that simulates a game between two teams.
+ * 
+ * @packages
+ *    None
+ */
+
 import Model.Game;
 import Model.Team;
 
