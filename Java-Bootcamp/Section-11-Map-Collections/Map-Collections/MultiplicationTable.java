@@ -1,3 +1,15 @@
+/**
+ * MULTIPLICATION TABLE
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java TreeMaps.
+ * 
+ * @packages
+ *    Java Utilities (Map. TreeMap)
+ */
+
 import java.util.Map;
 import java.util.TreeMap;
 
