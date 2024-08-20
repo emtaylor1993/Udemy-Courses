@@ -1,3 +1,16 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates joining threads in Java.
+ * 
+ * @packages
+ *    Java Utilities (Scanner)
+ *    Java Utilities Concurrent (ExecutorService, Executors, Future)
+ */
+
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -54,6 +67,15 @@ public class Main {
         return number;
     }
 
+    /**
+     * Function Name: difference
+     * @param number (double)
+     * @param index  (int)
+     * @return       (double)
+     * 
+     * Inside the Function:
+     *  1. Returns the difference between the numbers.
+     */
     public static double difference(double number, int index) {
         return Math.abs(targets[index] - number);
     }

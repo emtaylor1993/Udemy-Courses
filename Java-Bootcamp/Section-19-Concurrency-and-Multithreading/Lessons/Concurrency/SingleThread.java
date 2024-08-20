@@ -1,3 +1,15 @@
+/**
+ * SINGLE THREAD
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java single threaded applications.
+ * 
+ * @packages
+ *    None
+ */
+
 public class SingleThread {
     public static void main(String[] args) {
         longTask();
@@ -5,6 +17,11 @@ public class SingleThread {
 
     }
 
+    /**
+     * Function Name: longTask
+     * 
+     * Creates a long task to block the program.
+     */
     public static void longTask() {
         long t = System.currentTimeMillis();
         long end = t + 3000;

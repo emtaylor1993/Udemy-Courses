@@ -1,3 +1,20 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java I/O using Threads.
+ * 
+ * @packages
+ *    Java IO (IOException)
+ *    Java Net (URISyntaxException)
+ *    Java New IO (Files, Path, Paths)
+ *    Java Utilities (Scanner)
+ *    Java Utilities Concurrent (CountDownLatch, ExecutorService, Executors)
+ *    Java Utilities Concurrent Atomic (AtomicInteger)
+ */
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.file.Files;

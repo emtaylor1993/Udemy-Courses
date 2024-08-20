@@ -1,3 +1,15 @@
+/**
+ * MULTITHREAD
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates Java multithreading.
+ * 
+ * @packages
+ *    None
+ */
+
 public class MultiThread {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> longTask());
@@ -8,6 +20,11 @@ public class MultiThread {
         System.out.println("Doing other work on main thread");  
     }
 
+    /**
+     * Function Name: longTask
+     * 
+     * Creates a long task to block the program.
+     */
     public static void longTask() {
         try {
             Thread.sleep(3000);

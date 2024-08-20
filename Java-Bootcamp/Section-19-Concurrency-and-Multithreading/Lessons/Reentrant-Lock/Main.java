@@ -1,3 +1,16 @@
+/**
+ * MAIN
+ * 
+ * @author Emmanuel Taylor
+ * 
+ * @description
+ *    This is a simple class that illustrates locking in Java.
+ * 
+ * @packages
+ *    Java Utilities Concurrent (CountDownLatch, ExecutorService, Executors)
+ *    Java Utilities Concurrent Atomic (AtomicInteger)
+ */
+
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
