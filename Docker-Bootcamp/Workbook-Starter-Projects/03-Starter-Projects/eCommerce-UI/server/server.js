@@ -51,7 +51,7 @@ app.listen(port, () => {
 // # 2. Run 'npm install' to install server dependencies
 // # 3. Navigate to the client directory and run 'npm install' for React app dependencies
 // # 4. In the client directory, run 'npm run build' to build the React app
-// # 5. Navigate back to the server directory and run 'node app.js'
+// # 5. Navigate back to the server directory and run 'node server.js'
 
 // # This starts the Node.js server, serving the React app and providing API routes.
 
