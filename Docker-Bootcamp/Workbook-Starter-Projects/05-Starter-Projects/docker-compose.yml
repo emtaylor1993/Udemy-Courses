@@ -1,1 +1,171 @@
+version: '3'
+services:
 
+  ###########################################################
+  # ECOMMERCE UI
+  ###########################################################
+  ecommerce-ui:
+    image: ecommerce-ui:latest
+    container_name: ecommerce-ui
+    ports:
+      - "4000:4000"
+    environment:
+      - REACT_APP_PROFILE_API_HOST=http://profile-management
+      - REACT_APP_PRODUCT_API_HOST=http://product-catalog
+      - REACT_APP_INVENTORY_API_HOST=http://product-inventory
+      - REACT_APP_ORDER_API_HOST=http://order-management
+      - REACT_APP_SHIPPING_API_HOST=http://shipping-and-handling
+      - REACT_APP_CONTACT_API_HOST=http://contact-support-team
+    depends_on:
+      - profile-management
+      - product-catalog
+      - product-inventory
+      - order-management
+      - shipping-and-handling
+      - contact-support-team
+
+  ###########################################################
+  # CONTACT SUPPORT TEAM
+  ###########################################################
+  shipping-and-handling:
+    image: shipping-and-handling
+    container_name: shipping-and-handling
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGO_URI=mongodb://mongodb-shipping-and-handling:27017
+    depends_on:
+      - mongodb-shipping-and-handling
+
+  mongodb-shipping-and-handling:
+    image: mongo
+    container_name: mongodb-shipping-and-handling
+    volumes:
+      - mongodb-shipping-and-handling-data:/data/db
+
+  ###########################################################
+  # CONTACT SUPPORT TEAM
+  ###########################################################
+  contact-support-team:
+    image: contact-support-team
+    container_name: contact-support-team
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_HOST=mongodb-contact-support-team
+      - MONGODB_PORT=27017
+      - MONGODB_DATABASE=contact-support-team
+    depends_on:
+      - mongodb-contact-support-team
+
+  mongodb-contact-support-team:
+    image: mongo
+    container_name: mongodb-contact-support-team
+    volumes:
+      - mongodb-contact-support-team-data:/data/db
+
+  ###########################################################
+  # PRODUCT CATALOG
+  ###########################################################
+  product-catalog:
+    image: product-catalog
+    container_name: product-catalog
+    ports:
+      - "3001:3001"
+    environment:
+      - MONGODB_HOST=mongodb-product-catalog
+      - MONGODB_PORT=27017
+      - MONGODB_DATABASE=product-catalog
+    depends_on:
+      - mongodb-product-catalog
+
+  mongodb-product-catalog: # Runs on Container Port 27017
+    image: mongo
+    container_name: mongodb-product-catalog
+    volumes:
+      - mongodb-product-catalog-data:/data/db
+
+  ###########################################################
+  # ORDER MANAGEMENT
+  ###########################################################
+  order-management:
+    image: order-management
+    container_name: order-management
+    ports:
+      - "9090:9090"
+    environment:
+      - PRODUCT_INVENTORY_API_HOST=http://product-inventory
+      - PRODUCT_CATALOG_API_HOST=http://product-catalog
+      - SHIPPING_HANDLING_API_HOST=http://shipping-and-handling
+      - SPRING_DATA_MONGODB_URI=mongodb://mongodb-order-management:27017/order-management
+    depends_on:
+      - mongodb-order-management
+
+  mongodb-order-management: # Runs on Container Port 27017
+    image: mongo
+    container_name: mongodb-order-management
+    volumes:
+      - mongodb-order-management-data:/data/db
+
+  ###########################################################
+  # PRODUCT INVENTORY
+  ###########################################################
+  product-inventory:
+    image: product-inventory
+    container_name: product-inventory
+    ports:
+      - "3002:3002"
+    environment:
+      - POSTGRES_HOST=postgres-product-inventory
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=product-inventory
+      - POSTGRES_USER=inventory_user
+      - POSTGRES_PASSWORD=inventory_password
+    depends_on:
+      - postgres-product-inventory
+
+  postgres-product-inventory: # Runs on Container Port 5432
+    image: postgres
+    container_name: postgres-product-inventory
+    environment:
+      - POSTGRES_DB=product-inventory
+      - POSTGRES_USER=inventory_user
+      - POSTGRES_PASSWORD=inventory_password
+    volumes:
+      - postgres-product-inventory-data:/var/lib/postgresql/data
+
+  ###########################################################
+  # PROFILE MANAGEMENT
+  ###########################################################
+  profile-management:
+    image: profile-management
+    container_name: profile-management
+    ports:
+      - "3003:3003"
+    environment:
+      - MYSQL_HOST=mysql-profile-management
+      - MYSQL_PORT=3306
+      - MYSQL_DATABASE=profile-management
+      - MYSQL_USER=profile_user
+      - MYSQL_PASSWORD=profile_password
+    depends_on:
+      - mysql-profile-management
+
+  mysql-profile-management: # Runs on Container Port 3306
+    image: mysql:8.0
+    container_name: mysql-profile-management
+    environment:
+      - MYSQL_DATABASE=profile-management
+      - MYSQL_USER=profile_user
+      - MYSQL_PASSWORD=profile_password
+      - MYSQL_ROOT_PASSWORD=root_password
+    volumes:
+      - mysql-profile-management-data:/var/lib/mysql
+
+volumes:
+  mongodb-product-catalog-data:
+  mongodb-contact-support-team-data:
+  mongodb-shipping-and-handling-data:
+  mongodb-order-management-data:
+  mysql-profile-management-data:
+  postgres-product-inventory-data:

@@ -11,4 +11,5 @@ COPY . .
 EXPOSE 9090
 
 ## 5. Define the command to run when the container starts.
+RUN mvn install
 CMD ["mvn", "spring-boot:run"]
