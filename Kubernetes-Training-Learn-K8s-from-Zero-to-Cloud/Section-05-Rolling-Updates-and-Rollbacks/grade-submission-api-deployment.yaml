@@ -1,0 +1,56 @@
+#-----------------------------------------------------------------------
+# File: grade-submission-api-deployment.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 1, 2025
+# Modified: July 1, 2025
+#
+# Description:
+# Kubernetes Deployment definition for grade-submission-api (stateful version).
+# 
+# This Deployment ensures two replicas of the grade-submission-api pod
+# are running in the grade-submission namespace, with rolling update strategy.
+#
+# The Deployment:
+# - Manages backend API pods for the grade-submission application.
+# - Uses a RollingUpdate strategy to update pods with minimal downtime:
+#   > maxUnavailable: 50% allows up to 1 pod to be unavailable during updates.
+#   > maxSurge: 1 allows up to 1 extra pod above the desired replicas during updates.
+# - Uses resource requests and limits to control CPU and memory usage.
+# - Exposes port 3000 from each container for internal communication.
+# - Uses labels for organizing, selecting, and managing pods.
+#-----------------------------------------------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grade-submission-api
+  namespace: grade-submission
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: grade-submission-api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 50%
+      maxSurge: 1 # Ensures we do not have more than three replicas running.
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: grade-submission
+        app.kubernetes.io/component: backend
+        app.kubernetes.io/instance: grade-submission-api
+    spec:
+      containers:
+      - name: grade-submission-api
+        image: rslim087/kubernetes-course-grade-submission-api:stateful
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "128m"
+          limits:
+            memory: "128Mi"
+        ports:
+          - containerPort: 3000
