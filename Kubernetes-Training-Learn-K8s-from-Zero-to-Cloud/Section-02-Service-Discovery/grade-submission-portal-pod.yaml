@@ -1,3 +1,21 @@
+#-----------------------------------------------------------------------
+# File: grade-submission-portal-pod.yaml
+#
+# Author: Emmanuel Taylor
+# Created: June 30, 2025
+# Modified: June 30, 2025
+#
+# Description:
+# Kubernetes Pod definition for the grade-submission-portal application.
+# 
+# This Pod runs one container:
+# - The main frontend service (grade-submission-portal)
+#
+# The Pod is labeled for frontend identification and can be targeted by
+# services or policies. Resources are constrained for controlled CPU and
+# memory usage.
+#-----------------------------------------------------------------------
+
 apiVersion: v1
 kind: Pod
 metadata:
