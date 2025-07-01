@@ -1,0 +1,67 @@
+#-----------------------------------------------------------------------
+# File: grade-submission-portal-deployment.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 1, 2025
+# Modified: July 1, 2025
+#
+# Description:
+# Kubernetes Deployment definition for the grade-submission-portal application.
+# 
+# This Deployment ensures one replica of the grade-submission-portal pod
+# is running in the grade-submission namespace.
+#
+# The Deployment:
+# - Runs the frontend portal for the grade-submission app.
+# - Configures environment variables to connect to the backend API service.
+# - Defines liveness and readiness probes to monitor pod health:
+#   > Liveness probe checks /healthz to detect and restart unhealthy containers.
+#   > Readiness probe checks /readyz to determine if the pod is ready to serve traffic.
+# - Uses resource requests and limits for controlled memory and CPU usage.
+# - Exposes port 5001 for internal communication.
+# - Uses labels for organization, service selection, and management.
+#-----------------------------------------------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grade-submission-portal
+  namespace: grade-submission
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: grade-submission-portal
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: grade-submission
+        app.kubernetes.io/component: frontend
+        app.kubernetes.io/instance: grade-submission-portal
+    spec:
+      containers:
+      - name: grade-submission-portal
+        image: rslim087/kubernetes-course-grade-submission-portal
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 5001
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 5001
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        env:
+          - name: GRADE_SERVICE_HOST
+            value: grade-submission-api
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "200m"
+          limits:
+            memory: "128Mi"
+        ports:
+          - containerPort: 5001

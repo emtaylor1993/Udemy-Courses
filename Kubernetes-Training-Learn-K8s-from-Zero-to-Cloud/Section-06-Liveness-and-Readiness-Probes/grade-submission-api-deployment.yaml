@@ -1,0 +1,71 @@
+#-----------------------------------------------------------------------
+# File: grade-submission-api-deployment.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 1, 2025
+# Modified: July 1, 2025
+#
+# Description:
+# Kubernetes Deployment definition for grade-submission-api (stateful version).
+# 
+# This Deployment ensures two replicas of the grade-submission-api pod
+# are running in the grade-submission namespace, with rolling update strategy.
+#
+# The Deployment:
+# - Manages the backend API for the grade-submission application.
+# - Uses a RollingUpdate strategy for controlled, zero-downtime updates:
+#   > maxUnavailable: 50% allows up to 1 pod to be unavailable during updates.
+#   > maxSurge: 1 allows up to 1 extra pod above desired replicas during updates.
+# - Defines liveness and readiness probes:
+#   > Liveness probe monitors /healthz to restart unhealthy pods.
+#   > Readiness probe monitors /readyz to signal when pods are ready for traffic.
+# - Uses resource requests and limits to control CPU and memory usage.
+# - Exposes container port 3000 for internal communication.
+# - Applies labels for selection, organization, and service targeting.
+#-----------------------------------------------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grade-submission-api
+  namespace: grade-submission
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: grade-submission-api
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 50%
+      maxSurge: 1 # Ensures we do not have more than three replicas running.
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: grade-submission
+        app.kubernetes.io/component: backend
+        app.kubernetes.io/instance: grade-submission-api
+    spec:
+      containers:
+      - name: grade-submission-api
+        image: rslim087/kubernetes-course-grade-submission-api:stateless
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "128m"
+          limits:
+            memory: "128Mi"
+        ports:
+          - containerPort: 3000
