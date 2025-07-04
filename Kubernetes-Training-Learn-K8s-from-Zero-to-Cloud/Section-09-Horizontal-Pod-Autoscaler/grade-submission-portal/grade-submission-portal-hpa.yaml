@@ -1,0 +1,36 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-portal-hpa.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 3, 2025
+# Modified: July 3, 2025
+#
+# Description:
+# Kubernetes HorizontalPodAutoscaler (HPA) definition for grade-submission-portal.
+#
+# The HPA:
+# - Automatically scales the number of replicas of the grade-submission-portal Deployment.
+# - Adjusts replicas between 1 (min) and 10 (max) based on CPU utilization.
+# - Targets 50% average CPU utilization across all pods in the Deployment.
+# - Requires Metrics Server to be running in the cluster to gather resource metrics.
+# ------------------------------------------------------------------------------
+
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: grade-submission-portal-hpa
+  namespace: grade-submission
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: grade-submission-portal
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 50

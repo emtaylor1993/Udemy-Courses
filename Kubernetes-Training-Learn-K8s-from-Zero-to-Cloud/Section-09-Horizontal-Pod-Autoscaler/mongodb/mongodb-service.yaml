@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# File: mongodb-service.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 2, 2025
+# Modified: July 3, 2025
+#
+# Description:
+# Kubernetes Service definition for MongoDB within the grade-submission namespace.
+#
+# The Service:
+# - Provides a stable internal ClusterIP for accessing MongoDB pods.
+# - Routes traffic on port 27017 to the matching pod's container port 27017.
+# - Uses label selectors to dynamically match MongoDB StatefulSet pods.
+# - Enables other components (such as the grade-submission API) to access MongoDB
+#   via DNS name (e.g., mongodb.grade-submission.svc.cluster.local).
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb
+  namespace: grade-submission
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/instance: mongodb
+  ports:
+  - port: 27017
+    targetPort: 27017
