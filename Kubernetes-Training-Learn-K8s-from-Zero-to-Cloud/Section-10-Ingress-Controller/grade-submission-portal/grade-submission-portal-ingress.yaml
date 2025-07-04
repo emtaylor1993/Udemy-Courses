@@ -1,0 +1,36 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-portal-ingress.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 3, 2025
+# Modified: July 3, 2025
+#
+# Description:
+# Kubernetes Ingress definition for the grade-submission-portal application.
+#
+# The Ingress:
+# - Uses the nginx Ingress controller (specified via ingressClassName).
+# - Routes HTTP traffic from the cluster's external entry point (e.g. load balancer)
+#   to the grade-submission-portal Service on port 5001.
+# - Applies path-based routing:
+#   > All requests with the "/" prefix are forwarded to the backend service.
+# - Provides a centralized entry point for external HTTP traffic targeting the portal.
+# ------------------------------------------------------------------------------
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: grade-submission-portal-ingress
+  namespace: grade-submission
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: grade-submission-portal
+            port: 
+              number: 5001

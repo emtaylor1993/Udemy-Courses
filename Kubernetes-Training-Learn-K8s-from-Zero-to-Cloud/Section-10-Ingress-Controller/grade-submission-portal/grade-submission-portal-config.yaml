@@ -1,0 +1,24 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-portal-configmap.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 3, 2025
+# Modified: July 3, 2025
+#
+# Description:
+# Kubernetes ConfigMap definition for grade-submission-portal configuration.
+#
+# The ConfigMap:
+# - Stores non-sensitive configuration data for the grade-submission-portal.
+# - Provides the backend API service hostname (GRADE_SERVICE_HOST) as a key-value pair.
+# - Allows the frontend portal to dynamically reference the API service without hardcoding it.
+# - Can be consumed by pods as environment variables or mounted files.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grade-submission-portal-config
+  namespace: grade-submission
+data:
+  GRADE_SERVICE_HOST: grade-submission-api

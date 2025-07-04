@@ -1,0 +1,30 @@
+#-----------------------------------------------------------------------
+# File: grade-submission-api-service.yaml
+#
+# Author: Emmanuel Taylor
+# Created: June 30, 2025
+# Modified: June 30, 2025
+#
+# Description:
+# Kubernetes Service definition for the grade-submission-api application.
+# 
+# This service exposes the grade-submission-api Pod internally within the
+# cluster using ClusterIP. It routes traffic on port 3000 to the matching
+# pod with label app.kubernetes.io/instance=grade-submission-api.
+#
+# This Service also enables other omponents inside the cluster to communicate
+# with the API without needing to know the Pod's IP address, providing stable
+# DNS and load balancing.
+#-----------------------------------------------------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: grade-submission-api
+  namespace: grade-submission
+spec:
+  selector:
+    app.kubernetes.io/instance: grade-submission-api
+  ports:
+  - port: 3000
+    targetPort: 3000

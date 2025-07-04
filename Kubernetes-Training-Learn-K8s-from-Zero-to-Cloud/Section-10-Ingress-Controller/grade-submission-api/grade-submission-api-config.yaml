@@ -1,0 +1,25 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-api-configmap.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 3, 2025
+# Modified: July 3, 2025
+#
+# Description:
+# Kubernetes ConfigMap definition for grade-submission-api configuration.
+#
+# The ConfigMap:
+# - Stores non-sensitive configuration data for the grade-submission-api.
+# - Provides MongoDB connection settings (host and port) as key-value pairs.
+# - Allows the Deployment to externalize configuration from container images.
+# - Can be consumed by pods via environment variables or mounted volumes.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grade-submission-api-config
+  namespace: grade-submission
+data:
+  MONGODB_HOST: mongodb
+  MONGODB_PORT: '27017'
