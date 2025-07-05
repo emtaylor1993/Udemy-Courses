@@ -1,0 +1,27 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-api-configmap.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Helm template for a Kubernetes ConfigMap that provides configuration 
+# for the grade-submission-api microservice.
+#
+# This ConfigMap:
+# - Stores non-sensitive MongoDB connection details (host and port) as key-value pairs.
+# - Externalizes configuration, keeping container images decoupled from environment-specific data.
+# - Is designed to be consumed by the grade-submission-api Deployment 
+#   via environment variables or as mounted files.
+# - Uses Helm templating to dynamically set names, namespaces, and values.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.microservice.name }}-config
+  namespace: {{ .Values.microservice.namespace }}
+data:
+  MONGODB_HOST: {{ .Values.env.MONGODB_HOST }}
+  MONGODB_PORT: {{ .Values.env.MONGODB_PORT | quote }}

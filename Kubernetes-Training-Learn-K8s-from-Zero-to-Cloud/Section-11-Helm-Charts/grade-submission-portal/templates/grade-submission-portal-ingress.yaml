@@ -1,0 +1,38 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-portal-ingress.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Helm template for a Kubernetes Ingress that exposes the grade-submission-portal
+# microservice externally via the nginx Ingress controller.
+#
+# This Ingress:
+# - Uses the nginx Ingress controller (specified with ingressClassName: nginx).
+# - Routes HTTP traffic from the cluster’s external entry point (e.g., cloud load balancer)
+#   to the grade-submission-portal Service on port {{ .Values.workload.port }}.
+# - Applies path-based routing:
+#   > All requests with the "/" prefix are forwarded to the portal Service.
+# - Provides a single, centralized entry point for external HTTP traffic to the portal.
+# - Uses Helm templating for dynamic naming, namespace, and service configuration.
+# ------------------------------------------------------------------------------
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.microservice.name }}-ingress
+  namespace: {{ .Values.microservice.namespace }}
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: {{ .Values.microservice.name }}
+            port: 
+              number: {{ .Values.workload.port }}

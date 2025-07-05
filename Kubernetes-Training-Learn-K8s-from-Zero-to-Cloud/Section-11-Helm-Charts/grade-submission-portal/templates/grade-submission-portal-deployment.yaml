@@ -1,0 +1,65 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-portal-deployment.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Helm template for the Kubernetes Deployment that manages the grade-submission-portal
+# microservice in the grade-submission namespace.
+#
+# This Deployment:
+# - Runs one replica of the frontend portal for the grade-submission app.
+# - Configures environment variables from a ConfigMap to connect to the backend API.
+# - Defines liveness and readiness probes:
+#   > Liveness probe checks /healthz to detect and restart unhealthy containers.
+#   > Readiness probe checks /readyz to ensure pods are ready before receiving traffic.
+# - Specifies resource requests and limits for controlled CPU and memory usage.
+# - Exposes port {{ .Values.workload.port }} for internal cluster communication.
+# - Uses labels for organization, selection, and service targeting.
+# - Leverages Helm templating for dynamic configuration of names, namespace, image, and settings.
+# ------------------------------------------------------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.microservice.name }}
+  namespace: {{ .Values.microservice.namespace }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: {{ .Values.microservice.name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: grade-submission
+        app.kubernetes.io/component: frontend
+        app.kubernetes.io/instance: {{ .Values.microservice.name }}
+    spec:
+      containers:
+      - name: {{ .Values.microservice.name }}
+        image: {{ .Values.workload.image }}
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: {{ .Values.workload.port }}
+          initialDelaySeconds: {{ .Values.workload.livenessDelay }}
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: {{ .Values.workload.port }}
+          periodSeconds: 5
+        envFrom:
+          - configMapRef:
+              name: {{ .Values.microservice.name }}-config
+        resources:
+          requests:
+            memory: {{ .Values.workload.resources.memory }}
+            cpu: {{ .Values.workload.resources.cpu }}
+          limits:
+            memory: {{ .Values.workload.resources.memory }}
+        ports:
+          - containerPort: {{ .Values.workload.port }}
