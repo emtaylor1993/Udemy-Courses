@@ -1,0 +1,31 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-api-service.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Helm template for a Kubernetes Service that exposes the grade-submission-api 
+# microservice internally within the cluster using ClusterIP.
+#
+# This Service:
+# - Routes traffic on port {{ .Values.workload.port }} to pods matching
+#   the label app.kubernetes.io/instance={{ .Values.microservice.name }}.
+# - Provides stable DNS and internal load balancing for the API,
+#   allowing other components in the cluster to communicate with it
+#   without relying on pod IP addresses.
+# - Uses Helm templating to dynamically set names, namespace, ports, and selectors.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.microservice.name }}
+  namespace: {{ .Values.microservice.namespace }}
+spec:
+  selector:
+    app.kubernetes.io/instance: {{ .Values.microservice.name }}
+  ports:
+  - port: {{ .Values.workload.port }}
+    targetPort: {{ .Values.workload.port }}

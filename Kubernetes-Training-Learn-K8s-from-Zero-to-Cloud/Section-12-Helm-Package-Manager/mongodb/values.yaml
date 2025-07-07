@@ -1,0 +1,29 @@
+# ------------------------------------------------------------------------------
+# File: values.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 7, 2025
+# Modified: July 7, 2025
+#
+# Description:
+# Custom values override file for deploying MongoDB via the Bitnami Helm chart.
+#
+# Configuration Summary:
+# - Enables StatefulSet deployment for persistent MongoDB storage.
+# - Disables authentication for local development or testing environments.
+# - Specifies a custom image version (MongoDB 6.0.4 on Ubuntu Jammy).
+# - Configures persistent volume mount path at /data/db.
+# -----------------------------------------------------------------------------
+
+useStatefulSet: true
+
+auth:
+  enabled: false
+
+image:
+  registry: docker.io
+  repository: mongo
+  tag: 6.0.4-jammy
+
+persistence:
+  mountPath: /data/db

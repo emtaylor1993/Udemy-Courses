@@ -1,0 +1,34 @@
+# ------------------------------------------------------------------------------
+# File: values.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Default values for the Helm chart that deploys the grade-submission-portal
+# microservice. These values define service metadata, container settings,
+# environment variables, and resource constraints.
+#
+# This values file:
+# - Configures the microservice name, namespace, and replica count.
+# - Specifies container image, port, resource requests/limits, and probe settings.
+# - Provides environment variables to connect to the grade-submission API.
+# - Supports Helm templating for dynamic configuration of all deployment settings.
+# ------------------------------------------------------------------------------
+
+microservice: ## General service details.
+  name: grade-submission-portal
+  namespace: grade-submission
+  replicas: 1
+
+workload:     ## Container specific details.
+  image: rslim087/kubernetes-course-grade-submission-portal
+  port: 5001
+  resources:
+    memory: "128Mi"
+    cpu: "200m"
+  livenessDelay: 15
+
+env:          ## Environment variables.
+  GRADE_SERVICE_HOST: grade-submission-api

@@ -1,0 +1,22 @@
+# ------------------------------------------------------------------------------
+# File: Chart.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Defines metadata for the Helm chart that deploys the grade-submission-portal 
+# microservice. This chart describes the name, version, and purpose of the chart.
+#
+# The Chart:
+# - Provides a Helm chart for deploying the frontend portal for student grade submissions.
+# - Targets deployment of the portal in a Kubernetes environment.
+# - Uses API version v2 for compatibility with Helm 3.
+# - Declares version 1.0.0 for tracking, upgrades, and repository indexing.
+# ------------------------------------------------------------------------------
+
+apiVersion: v2
+name: grade-submission-portal
+description: A Helm chart for deploying the Grade Submission Portal, a frontend service for managing student grade submissions in a Kubernetes environment.
+version: 1.0.0
