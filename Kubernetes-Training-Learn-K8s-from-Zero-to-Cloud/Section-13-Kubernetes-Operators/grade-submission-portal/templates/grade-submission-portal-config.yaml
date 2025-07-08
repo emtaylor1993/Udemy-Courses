@@ -1,0 +1,26 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-portal-configmap.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Helm template for a Kubernetes ConfigMap that provides configuration for the 
+# grade-submission-portal microservice.
+#
+# This ConfigMap:
+# - Stores non-sensitive configuration data for the frontend portal.
+# - Provides the backend API service hostname (GRADE_SERVICE_HOST) as a key-value pair.
+# - Enables the frontend to reference the API service dynamically rather than hardcoding it.
+# - Can be consumed by pods via environment variables or as mounted files.
+# - Uses Helm templating to dynamically set names, namespace, and values.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.microservice.name }}-config
+  namespace: {{ .Values.microservice.namespace }}
+data:
+  GRADE_SERVICE_HOST: {{ .Values.env.GRADE_SERVICE_HOST }}

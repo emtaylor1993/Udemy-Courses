@@ -1,0 +1,22 @@
+# ------------------------------------------------------------------------------
+# File: Chart.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 5, 2025
+# Modified: July 5, 2025
+#
+# Description:
+# Defines the metadata for the Helm chart used to deploy the grade-submission-api 
+# microservice. This chart describes the chart's name, version, and purpose.
+#
+# The Chart:
+# - Provides a Helm chart for deploying the Grade Submission API backend service.
+# - Specifies the chart API version (v2, for Helm 3 compatibility).
+# - Includes a description for documentation and chart repositories.
+# - Declares the chart version (1.0.1) for version tracking and upgrades.
+# ------------------------------------------------------------------------------
+
+apiVersion: v2
+name: grade-submission-api
+description: A Helm chart for deploying the Grade Submission API, a backend service for managing grade data.
+version: 1.0.3
