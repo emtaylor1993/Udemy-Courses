@@ -1,0 +1,45 @@
+# ------------------------------------------------------------------------------
+# File: rbac.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 23, 2025
+# Modified: July 23, 2025
+#
+# Description:
+# This manifest sets up RBAC for the grade-submission-api microservice:
+# - Creates a ServiceAccount used by the Deployment for authentication.
+# - Defines a ClusterRole with access to non-resource URLs.
+# - Binds the ServiceAccount to the ClusterRole using a ClusterRoleBinding.
+# ------------------------------------------------------------------------------
+
+# Service Account Definition.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: grade-service-account
+  namespace: grade-demo
+
+---
+# Cluster Role Definition.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: grade-service-role
+rules:
+- nonResourceURLs: ["/*"]
+  verbs: ["get", "post"]
+
+---
+# Cluster Role Binding Definition.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: grade-submission-binding
+subjects:
+- kind: ServiceAccount
+  name: grade-service-account
+  namespace: grade-demo
+roleRef:
+  kind: ClusterRole
+  name: grade-service-role
+  apiGroup: rbac.authorization.k8s.io

@@ -1,0 +1,52 @@
+# ------------------------------------------------------------------------------
+# File: proxy-rbac.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 23, 2025
+# Modified: July 23, 2025
+#
+# Description:
+# This manifest configures a ServiceAccount and ClusterRole-based RBAC
+# permissions required for kube-rbac-proxy to authorize and authenticate
+# requests forwarded to the grade-submission-api service.
+#
+# - The ServiceAccount `grade-service-proxy` is used by the kube-rbac-proxy container.
+# - The ClusterRole allows the proxy to perform token and access reviews.
+# - The ClusterRoleBinding connects the ServiceAccount to the required permissions.
+# ------------------------------------------------------------------------------
+
+# Service Account Definition.
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: grade-service-proxy
+  namespace: grade-demo
+
+---
+# Cluster Role Definition.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: grade-service-proxy-role
+rules:
+- apiGroups: ["authentication.k8s.io"]
+  resources: ["tokenreviews"]
+  verbs: ["create"]
+- apiGroups: ["authorization.k8s.io"]
+  resources: ["subjectaccessreviews"]
+  verbs: ["create"]
+
+---
+# Cluster Role Binding Definition.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: grade-submission-proxy-binding
+subjects:
+- kind: ServiceAccount
+  name: grade-service-proxy
+  namespace: grade-demo
+roleRef:
+  kind: ClusterRole
+  name: grade-service-proxy-role
+  apiGroup: rbac.authorization.k8s.io
