@@ -1,0 +1,28 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-api-service.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# Kubernetes Service definition for the grade-submission-api microservice.
+#
+# This Service:
+# - Creates a ClusterIP (default) service for internal access to the pod(s).
+# - Forwards traffic on port 3000 to port 3000 on the matched container.
+# - Uses the label selector app=grade-submission to target the correct pod(s).
+# - Enables stable networking and DNS-based service discovery within the cluster.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: grade-submission-api  # Name of the Service resource.
+  namespace: grade-demo       # Namespace in which this service is deployed.
+spec:
+  selector:
+    app: grade-submission     # Targets pods that match this label.
+  ports:
+    - port: 3000              # Port exposed by the Service internally.
+      targetPort: 3000        # Port container is actually listening on.

@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# File: kong-authentication-plugin.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# KongPlugin definition for enforcing API key-based authentication on the
+# grade-submission-api service via Kong Gateway.
+#
+# This Plugin:
+# - Enables the "key-auth" plugin to require a valid API key in requests.
+# - Looks for the API key in a header named `apikey`.
+# - Hides the credential from upstream services after validation.
+# - Must be referenced in a KongIngress resource or Ingress annotations.
+# ------------------------------------------------------------------------------
+
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+ name: grade-authentication          # Must match name in Ingress annotation.
+ namespace: grade-demo               # Namespace in which the plugin is defined.
+ annotations:
+  kubernetes.io/ingress.class: kong  # Specifies that this plugin is used in Kong Ingress.
+config:
+ key_names:
+   - apikey                          # Custom header name for the API key.
+ hide_credentials: true              # Prevents API Key from being forwarded upstream.
+plugin: key-auth                     # Plugin type that enables key-based authentication.

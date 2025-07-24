@@ -1,0 +1,40 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-ingress.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# Kong-managed Ingress resource to expose the grade-submission-api service.
+#
+# This Ingress:
+# - Routes external HTTP requests to the internal /grades path on the service.
+# - Uses the Kong ingress controller to process and proxy traffic.
+# - Applies authentication and rate-limiting via the KongPlugin system.
+# - Restricts allowed HTTP methods to GET and POST.
+# - Does not strip the path when forwarding to the backend.
+# ------------------------------------------------------------------------------
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: grade-submission                     # Name of the ingress resource.
+ namespace: grade-demo                      # Namespace this ingress is deployed in.
+ annotations:
+   konghq.com/strip-path: "false"           # Preserves /grades path when forwarding to backend.
+   konghq.com/plugins: grade-authentication, grade-rate-limit    # Plugin names referenced in KongPlugin resources.
+   kubernetes.io/ingress.class: kong        # Routes this ingress through Kong Controller
+   konghq.com/methods: "GET, POST"          # Restricts traffic to only GET and POST requests.
+spec:
+ ingressClassName: kong                     # Ties this Ingress to the Kong Ingress Controller.
+ rules:
+   - http:
+       paths:
+         - path: /grades                    # Public path exposed externally by the Ingress.
+           pathType: Prefix                 # Matches all requests starting with /grades.
+           backend:
+             service:
+               name: grade-submission-api   # Name of your K8s Service.
+               port:
+                 number: 3000               # Port exposed by your Service.

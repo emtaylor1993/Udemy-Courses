@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------
+# File: namespace.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# Kubernetes Namespace definition for the grade-demo environment.
+#
+# This Namespace:
+# - Isolates all grade-demo related resources from other workloads in the cluster.
+# - Provides a logical boundary for managing deployments, services, and configurations.
+# - Helps enforce security, resource quotas, and access controls on a per-namespace basis.
+# ------------------------------------------------------------------------------
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: grade-demo

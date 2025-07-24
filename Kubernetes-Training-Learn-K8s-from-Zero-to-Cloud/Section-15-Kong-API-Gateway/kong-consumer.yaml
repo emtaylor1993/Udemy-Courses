@@ -1,0 +1,29 @@
+# ------------------------------------------------------------------------------
+# File: kong-consumer.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# KongConsumer definition for authenticating a client (user or service) to access
+# the grade-submission-api via the Kong Gateway using an API key.
+#
+# This Consumer:
+# - Represents an API client called "grade-submission".
+# - Relies on an API key stored in a Kubernetes Secret named `user1-apikey`.
+# - Must be used in conjunction with a KongPlugin like `key-auth` for enforcement.
+# - Is linked to the plugin via the key credential Secret.
+# ------------------------------------------------------------------------------
+
+apiVersion: configuration.konghq.com/v1
+kind: KongConsumer
+metadata:
+ name: grade-submission-consumer          # Unique name for this consumer.
+ namespace: grade-demo                    # Namespace where the consumer and secrets are deployed.
+ annotations:
+  kubernetes.io/ingress.class: kong       # Specifies this consumer is used with Kong Ingress.
+username: grade-submission                # Username for this consumer.
+custom_id: grade-submission-consumer-1    # Unique ID for this consumer.
+credentials:
+ - user1-apikey                           # Name of the Secret containing the API key.

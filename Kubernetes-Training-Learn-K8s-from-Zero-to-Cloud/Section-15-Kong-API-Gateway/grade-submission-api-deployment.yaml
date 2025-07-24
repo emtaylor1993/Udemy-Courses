@@ -1,0 +1,46 @@
+# ------------------------------------------------------------------------------
+# File: grade-submission-api-deployment.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# Kubernetes Deployment manifest for the grade-submission-api microservice.
+#
+# This Deployment:
+# - Launches a single replica of the grade-submission-api pod in the grade-demo namespace.
+# - Applies the label app=grade-submission to support selector-based service matching.
+# - Runs the grade-submission-api Docker image as a microservice.
+# - Exposes port 3000 for internal communication within the cluster.
+# - Specifies minimal CPU and memory resource requests and limits for container scheduling.
+# ------------------------------------------------------------------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grade-submission-api
+  namespace: grade-demo
+  labels:
+    app: grade-submission
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grade-submission
+  template:
+    metadata:
+      labels:
+        app: grade-submission
+    spec:
+      containers:
+      - name: grade-submission-api
+        image: rslim087/kubernetes-course-grade-submission-api:stateless
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "128m"
+          limits:
+            memory: "128Mi"
+        ports:
+          - containerPort: 3000

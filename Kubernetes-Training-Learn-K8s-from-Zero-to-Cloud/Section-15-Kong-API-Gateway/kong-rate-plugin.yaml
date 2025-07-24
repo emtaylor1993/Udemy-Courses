@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------------------
+# File: grade-rate-limit-plugin.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 24, 2025
+# Modified: July 24, 2025
+#
+# Description:
+# KongPlugin definition to enforce rate limiting on requests to the
+# grade-submission-api service via Kong Gateway.
+#
+# This Plugin:
+# - Applies the "rate-limiting" plugin to protect the API from abuse.
+# - Limits requests to 5 per minute per consumer.
+# - Uses a local policy (in-memory, not shared across pods).
+# - Must be referenced in a KongIngress or via Ingress annotations.
+# ------------------------------------------------------------------------------
+
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+ name: grade-rate-limit              # Must match name in Ingress annotation.
+ namespace: grade-demo               # Namespace in which the plugin is defined.
+ annotations:
+  kubernetes.io/ingress.class: kong  # Specifies this plugin is managed by Kong Ingress.
+config:
+ minute: 5                           # Number of requests allowed per minute.
+ limit_by: consumer                  # Limit rate based on the KongConsumer.
+ policy: local                       # Use an in-memory, local counter.
+plugin: rate-limiting                # Name of the Kong Plugin.
