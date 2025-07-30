@@ -1,3 +1,21 @@
+# ------------------------------------------------------------------------------
+# File: values.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 29, 2025
+# Modified: July 29, 2025
+#
+# Description:
+# Helm values configuration for deploying the Bitnami Keycloak chart.
+#
+# This file:
+# - Configures global PostgreSQL credentials for both internal and external use.
+# - Sets the Keycloak admin user credentials for accessing the web UI.
+# - Enables and configures the internal PostgreSQL instance used by Keycloak.
+# - Exposes the Keycloak service on NodePort 30080 for local browser access.
+# - Injects additional environment variables to optimize Keycloak's runtime behavior.
+# ------------------------------------------------------------------------------
+
 # Global PostgreSQL settings
 global:
   postgresql:

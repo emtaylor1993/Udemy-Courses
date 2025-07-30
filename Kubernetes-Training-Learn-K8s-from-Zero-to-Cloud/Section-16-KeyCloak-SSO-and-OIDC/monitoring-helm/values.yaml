@@ -1,3 +1,21 @@
+# ------------------------------------------------------------------------------
+# File: values.yaml
+#
+# Author: Emmanuel Taylor
+# Created: July 29, 2025
+# Modified: July 29, 2025
+#
+# Description:
+# Helm values configuration for customizing the Grafana component of the 
+# kube-prometheus-stack Helm chart.
+#
+# This file:
+# - Configures Grafana to use Keycloak for OAuth2 login via OIDC.
+# - Enables user signup and sets up generic OAuth integration.
+# - Customizes how Grafana is accessed externally through root_url.
+# - Disables deployment of node-exporter due to incompatibility with Docker Desktop.
+# ------------------------------------------------------------------------------
+
 grafana:
   grafana.ini:
     server:
