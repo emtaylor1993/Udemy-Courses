@@ -1,0 +1,128 @@
+# =============================================================================
+# Author: Emmanuel Taylor
+# File: docker-compose.yml
+# Description:
+#   Docker Compose configuration for running a local multi-node Apache Kafka
+#   cluster using KRaft mode, not ZooKeeper.
+#
+#   This setup provisions three Kafka nodes, each acting as both broker and
+#   controller, forming a controller quorum for metadata management and fault
+#   tolerance.
+#
+#   This configuration supports:
+#     - Internal broker-to-broker communication via Docker networking.
+#     - External client access from the host machine.
+#     - Persistent Kafka log storage via Docker volumes.
+# 
+# Intended Use:
+#   - Local development and learning from Apache Kafka Udemy Course.
+#   - Testing multi-broker behavior, leader election, and replication.
+#
+# Notes:
+#   - PLAINTEXT listeners are used for simplicity, not production use.
+#   - KRaft mode eliminates the need for ZooKeeper.
+#   - External ports are intentionally unique per broker to avoid conflicts.
+#
+# Last Updated: December 18, 2025
+# =============================================================================
+
+services:
+
+  # ================================
+  # Kafka Broker / Controller 1
+  # ================================
+  kafka-1:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka-1
+    ports:
+      - "9092:9092"
+    environment:
+      CLUSTER_ID: "WnLkTHhkQaiJbwP8FClPhw"      # KRaft Cluster ID (must be the same for all brokers).
+      KAFKA_NODE_ID: 1                          # Unique Node ID for this broker/controller.
+      KAFKA_PROCESS_ROLES: broker,controller    # This node acts as BOTH a broker and a controller.
+
+      # Controller quorum configuration to define which nodes participate in metadata consensus.
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka-1:9091,2@kafka-2:9091,3@kafka-3:9091
+
+      # Define Kafka Listeners:
+      # - PLAINTEXT: internal broker-to-broker + container traffic.
+      # - CONTROLLER: controller quorum communication.
+      # - EXTERNAL: connections from your host machine.
+      KAFKA_LISTENERS: PLAINTEXT://:9090,CONTROLLER://:9091,EXTERNAL://:9092
+
+      # Advertised listeners tell clients how to reach this broker. 
+      # Internal clients use kafka-1 and external uses localhost.
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-1:9090, EXTERNAL://${HOSTNAME:-localhost}:9092
+      
+      # Specifies which listener is used for controller traffic.
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+
+      # Maps listener names to security protocols. PLAINTEXT for local learning environment.
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      
+      # Listener used for broker-to-broker replication traffic.
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+
+      # Directory within container where Kafka will store logs and data.
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+
+    # Persists Kafka data on the host so restarts don't wipe topics.
+    volumes:
+      - ./volumes/kafka-1-data:/var/lib/kafka/data
+    networks:
+      - kafka-net
+
+  # ================================
+  # Kafka Broker / Controller 2
+  # ================================
+  kafka-2:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka-2
+    ports:
+      - "9094:9094"
+    environment:
+      CLUSTER_ID: "WnLkTHhkQaiJbwP8FClPhw"
+      KAFKA_NODE_ID: 2
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka-1:9091,2@kafka-2:9091,3@kafka-3:9091
+      KAFKA_LISTENERS: PLAINTEXT://:9090,CONTROLLER://:9091,EXTERNAL://:9094
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-2:9090, EXTERNAL://${HOSTNAME:-localhost}:9094
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+    volumes:
+      - ./volumes/kafka-2-data:/var/lib/kafka/data
+    networks:
+      - kafka-net
+
+  # ================================
+  # Kafka Broker / Controller 3
+  # ================================
+  kafka-3:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka-3
+    ports:
+      - "9096:9096"
+    environment:
+      CLUSTER_ID: "WnLkTHhkQaiJbwP8FClPhw"
+      KAFKA_NODE_ID: 3
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka-1:9091,2@kafka-2:9091,3@kafka-3:9091
+      KAFKA_LISTENERS: PLAINTEXT://:9090,CONTROLLER://:9091,EXTERNAL://:9096
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-3:9090, EXTERNAL://${HOSTNAME:-localhost}:9096
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+    volumes:
+      - ./volumes/kafka-3-data:/var/lib/kafka/data
+    networks:
+      - kafka-net
+
+# ================================
+# Docker network for Kafka cluster
+# ================================
+networks:
+  kafka-net:
+    driver: bridge  # Bridged networks allow containers to resolve each other by name.
