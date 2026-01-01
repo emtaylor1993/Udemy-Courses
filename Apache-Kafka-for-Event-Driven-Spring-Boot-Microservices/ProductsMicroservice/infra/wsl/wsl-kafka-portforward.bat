@@ -1,5 +1,3 @@
-bat
-
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
