@@ -37,4 +37,3 @@ public class ErrorMessage {
         this.details = details;
     }
 }
-
