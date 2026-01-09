@@ -35,7 +35,7 @@ public class KafkaConfig {
      * Kafka Broker bootstrap servers used by the Producer. 
      * This is the primary connection string the producer uses to discover the Kafka cluster.
      */
-    @Value("${spring.kafka.producer.bootstrap-servers}")
+    @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
     /**
@@ -78,6 +78,19 @@ public class KafkaConfig {
     private String requestTimeout;
 
     /**
+     * Enables idempotent producer to ensure exactly-once delivery semantics.
+     */
+    @Value("${spring.kafka.producer.properties.enable.idempotence}")
+    private boolean enableIdempotence;
+
+    /**
+     * Maximum number of unacknowledged requests the client will send on a single connection
+     * before blocking. Setting this to 1 ensures message ordering when retries occur.
+     */
+    @Value("${spring.kafka.producer.properties.max.in.flight.requests.per.connection}")
+    private Integer inflightRequests;
+
+    /**
      * Builds the producer configuration map used by the ProducerFactory.
      * 
      * @return Map of producer configuration properties
@@ -91,6 +104,9 @@ public class KafkaConfig {
         config.put(ProducerConfig.DELIVERY_TIMEOUT_MS_CONFIG, deliveryTimeout);
         config.put(ProducerConfig.LINGER_MS_CONFIG, linger);
         config.put(ProducerConfig.REQUEST_TIMEOUT_MS_CONFIG, requestTimeout);
+        config.put(ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, enableIdempotence);
+        config.put(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, inflightRequests);
+        // config.put(ProducerConfig.RETRIES_CONFIG, Integer.MAX_VALUE);
         return config;
     }
 
