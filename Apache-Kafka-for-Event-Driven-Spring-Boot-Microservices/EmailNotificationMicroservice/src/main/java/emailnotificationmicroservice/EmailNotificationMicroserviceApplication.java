@@ -1,4 +1,4 @@
-package productsmicroservice;
+package emailnotificationmicroservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,13 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Emmanuel Taylor
  * 
  * Responsibilities:
- *  - Bootstraps the Products Microservice Spring Boot application.
+ *  - Bootstraps the Email Notification Microservice Spring Boot application.
  *  - Enables component scanning and auto-configuration via @SpringBootApplication.
  */
 @SpringBootApplication
-public class ProductsMicroserviceApplication {
+public class EmailNotificationMicroserviceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductsMicroserviceApplication.class, args);
+		SpringApplication.run(EmailNotificationMicroserviceApplication.class, args);
 	}
 }

@@ -13,7 +13,7 @@ import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 
-import productsmicroservice.service.ProductCreatedEvent;
+import core.ProductCreatedEvent;
 
 /**
  * KAFKA PRODUCER CONFIGURATION

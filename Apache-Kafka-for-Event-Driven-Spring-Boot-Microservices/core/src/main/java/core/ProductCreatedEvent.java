@@ -1,4 +1,4 @@
-package productsmicroservice.service;
+package core;
 
 import java.math.BigDecimal;
 
