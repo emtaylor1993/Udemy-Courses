@@ -38,21 +38,15 @@ public class KafkaConfig {
     @Value("${spring.kafka.bootstrap-servers}")
     private String bootstrapServers;
 
-    /**
-     * Serializer class for the message key.
-     */
+    /** Serializer class for the message key. */
     @Value("${spring.kafka.producer.key-serializer}")
     private String keySerializer;
 
-    /**
-     * Serializer class for the message value or event payload.
-     */
+    /** Serializer class for the message value or event payload. */
     @Value("${spring.kafka.producer.value-serializer}")
     private String valueSerializer;
 
-    /**
-     * Acknowledgement level for writes.
-     */
+    /** Acknowledgement level for writes. */
     @Value("${spring.kafka.producer.acks}")
     private String acks;
 
@@ -77,9 +71,7 @@ public class KafkaConfig {
     @Value("${spring.kafka.producer.properties.request.timeout.ms}")
     private String requestTimeout;
 
-    /**
-     * Enables idempotent producer to ensure exactly-once delivery semantics.
-     */
+    /** Enables idempotent producer to ensure exactly-once delivery semantics.*/
     @Value("${spring.kafka.producer.properties.enable.idempotence}")
     private boolean enableIdempotence;
 
@@ -128,7 +120,7 @@ public class KafkaConfig {
      * @return KafkaTemplate instance
      */
     @Bean
-    KafkaTemplate<String, ProductCreatedEvent> kafkaTemplate() {
+    public KafkaTemplate<String, ProductCreatedEvent> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 
@@ -139,7 +131,7 @@ public class KafkaConfig {
      * @return NewTopic instance representing the topic configuration
      */
     @Bean
-    NewTopic createTopic() {
+    public NewTopic createTopic() {
         return TopicBuilder.name("product-created-events-topic")
             .partitions(3)
             .replicas(3)
