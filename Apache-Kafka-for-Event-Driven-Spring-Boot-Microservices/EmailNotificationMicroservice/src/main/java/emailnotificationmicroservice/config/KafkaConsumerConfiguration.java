@@ -22,6 +22,10 @@ import org.springframework.kafka.listener.DefaultErrorHandler;
 import org.springframework.kafka.support.serializer.ErrorHandlingDeserializer;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 import org.springframework.kafka.support.serializer.JsonSerializer;
+import org.springframework.util.backoff.FixedBackOff;
+
+import emailnotificationmicroservice.error.NotRetryableException;
+import emailnotificationmicroservice.error.RetryableException;
 
 /**
  * KAFKA CONSUMER CONFIGURATION
@@ -31,6 +35,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
  *  - Builds a ConsumerFactory for creating Kafka Consumer instances used by @KafkaListener methods.
  *  - Centralizes consumer configuration (bootstrap servers, deserializers, group ID).
  *  - Applies JSON Deserializer security controls via trusted packages to prevent unsafe deserialization.
+ *  - Configures listener error-handling (retries + dead-letter publishing) with DefaultErrorHandler.
  *  - Creates a ConcurrentKafkaListenerContainerFactory to manage listener containers.
  */
 @Configuration
@@ -60,16 +65,20 @@ public class KafkaConsumerConfiguration {
 
     /**
      * Creates the listener container factory used by the @KafkaListener annotation.
-     * DeadLetterPublishingRecoverer will publish failed messages to a dead-letter topic.
+     * DeadLetterPublishingRecoverer will publish failed messages to a dead-letter topic with 3 retries at a 5 second delay.
      * 
      * @param consumerFactory - The ConsumerFactory to set on the listener container factory.
+     * @param kafkaTemplate - Publishes to a dead-letter topic after retries are exchausted.
      * @return ConcurrentKafkaListenerContainerFactory for String keys and Object payloads.
      */
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, Object> kafkaLisenerContainerFactory(
+    public ConcurrentKafkaListenerContainerFactory<String, Object> kafkaListenerContainerFactory(
         ConsumerFactory<String, Object> consumerFactory, KafkaTemplate<String, Object> kafkaTemplate
     ) {
-        DefaultErrorHandler errorHandler = new DefaultErrorHandler(new DeadLetterPublishingRecoverer(kafkaTemplate));
+        DefaultErrorHandler errorHandler = new DefaultErrorHandler(new DeadLetterPublishingRecoverer(kafkaTemplate), new FixedBackOff(5000, 3));
+        errorHandler.addNotRetryableExceptions(NotRetryableException.class);
+        errorHandler.addRetryableExceptions(RetryableException.class);
+
         ConcurrentKafkaListenerContainerFactory<String, Object> factory = new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory);
         factory.setCommonErrorHandler(errorHandler);
